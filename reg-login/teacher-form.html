@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cộng tác</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/utils.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/register-main.css">
+    <link rel="stylesheet" href="../assets/css/teacher-form.css">
+    <style></style>
+   
+</head>
+<body>
+    <!-- Header -->
+   <header id="header"></header>
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <div class="container bg-white border-radius-16 mb-5">
+        <div class="row mt-4 border-radius-16">
+            <main class="form-signup pb-3 border-radius-16 px-32">
+                <form>
+                  <img class="mb-4" src="../assets/img/teachers.png" alt="Teachers" >
+                  <h1 class="register-title h3 mb-1">Đăng ký trở thành giảng viên</h1>
+                  <p class="register-sub-title">Hãy nhập thông tin bên dưới để đăng ký tài khoản</p>
+                  <div class="form-body">
+                      <div class="d-flex flex-column flex-md-row justify-content-between">
+                          <div class="form text-start mb-3">
+                            <label for="floatingAccount">Họ và tên</label>
+                            <input type="text" class="form-control" id="floatingAccount" placeholder="Vương Hoàng Thu Trúc">
+                          </div> <!--.form--->
+                          <div class="form text-start mb-3">
+                            <label for="floatingProfession">Chức danh</label>
+                            <input type="text" class="form-control" id="floatingProfession" placeholder="Giảng viên trường Đại học">
+                          </div> <!--.form--->
+                      </div>
+                      <div class="d-flex flex-column flex-md-row justify-content-between">
+                          <div class="form text-start mb-3">
+                            <label for="floatingAddress">Địa chỉ</label>
+                            <input type="text" class="form-control" id="floatingAddress" placeholder="Nhập địa chỉ">
+                          </div> <!--.form--->
+                          <div class="form text-start mb-3">
+                            <label for="floatingTelephone">Số điện thoại</label>
+                            <input type="text" class="form-control" id="floatingTelephone" placeholder="Nhập số điện thoại">
+                          </div> <!--.form--->
+                      </div>
+                      <div class="form text-start mb-3">
+                        <label for="floatingFacebook">Link Facebook của bạn</label>
+                        <input type="text" class="form-control" id="floatingFacebook" placeholder="www.facebook.com/stroke.only">
+                      </div> <!--.form--->
+                      <div class="form text-start mb-3">
+                        <label for="floatingSubject">Chủ đề bạn muốn giảng dạy trên Bis.net</label>
+                        <input type="text" class="form-control" id="floatingSubject" placeholder="Phân tích cơ sở dữ liệu">
+                        <p class="note">Vui lòng nhập mật khẩu từ 8 ký tự trở lên, bao gồm chữ VIẾT HOA, chữ số và ký tự đặc biệt</p>
+                      </div> <!--.form--->
+                      <div class="form text-start mb-3">
+                        <label for="floatingExperience">Mô tả kinh nghiệm</label>
+                        <input type="text" class="form-control" id="floatingExperience" placeholder="Kinh nghiệm giảng dạy của bạn">
+                        <p class="note">Vui lòng nhập theo mật khẩu đã tạo ở trên</p>
+                      </div> <!--.form--->
+                      <div class="form text-start mb-3">
+                        <label for="floatingPassword">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Nhập lại mật khẩu">
+                        <p class="note">Vui lòng nhập theo mật khẩu đã tạo ở trên</p>
+                      </div> <!--.form--->
+                      <div class="radio-container d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                          <div class="font-size-14 col-3 text-start mb-2">Khu vực</div>
+                          <div class="my-0 radio-check form-check me-24">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Hà Nội</label>
+                          </div> <!--.radio-check--->
+                          <div class="my-0 radio-check form-check me-24">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Đà Nẵng</label>
+                          </div> <!--.radio-check--->
+                          <div class="my-0 radio-check form-check me-24">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">TP. Hồ Chí Minh</label>
+                          </div> <!--.radio-check--->
+                          <div class="my-0 radio-check form-check me-24">
+                            <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Khác</label>
+                          </div> <!--.radio-check--->
+                      </div> <!--.radio-container--->
+                      <div class="radio-container mt-2 d-flex align-items-center">
+                        <div class="hasCourse font-size-14 col-3 text-start">Đã có bài giảng?</div>
+                        <div class="my-0 ms-3 ms-md-0 radio-check form-check me-1 me-md-32">
+                          <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">Đã có</label>
+                        </div> <!--.radio-check--->
+                        <div class="my-0 radio-check form-check me-1 me-md-24">
+                          <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">Chưa có</label>
+                        </div> <!--.radio-check--->
+                      </div> <!--.radio-container--->
+                  </div> <!--.form-body--->
+                  <div class="checkbox mb-3">
+                    <label class="agree-service">
+                      <input type="checkbox" value="remember-me">Tôi đồng ý với<a href="#"> &nbspĐiều khoản dịch vụ&nbsp</a>và<a href="#">&nbspChính sách bảo mật</a> 
+                    </label>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                      <a href="../index-user.html" class="register-btn bg-btn-color text-uppercase mb-3 w-50 btn btn-lg"  type="submit">
+                          <img src="../assets/img/mail-icon.png" class="me-2" alt="Mail icon">
+                        ĐĂNG Ký
+                      </a>
+                  </div>
+                  <a href="../index.html" class="return cl-red-2 text-decoration-none fw_600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000" class="bi bi-arrow-left me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                      </svg>
+                      Quay lại
+                  </a>
+                  <hr class="w-50 mt-2 mb-32 m-auto">
+                  <p class="signin-notify mt-3 text-muted">Bạn đã có tài khoản?<a href="./login.html" class="cl-red-3 fw_600">&nbsp Hãy đăng nhập</a></p>
+                </form>
+            </main> <!--.form-signup-->
+        </div>
+    </div>
+
+     <!--.subscribe-->
+     <div id="subscribe"></div>
+
+     <!-- Footer -->
+     <footer id="footer"></footer>
+    
+      <script>
+        $('#header').load("../component/header.html"); 
+        $('#subscribe').load("../component/subscribe.html"); 
+        $('#footer').load("../component/footer.html");
+        $('#fb-root').load("../component/chat.html");
+      </script>
+
+</body> 
+  
+  

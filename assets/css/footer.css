@@ -1,0 +1,131 @@
+/* Footer */
+.footer {
+    background-color: #ea1b3c;
+    color: #fff;
+}
+.footer--bottom-section {
+    padding: 24px 20px 80px;
+    justify-content: center;
+}
+.footer-logo__wrapper {
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+.footer-logo__brand {
+    color: #fff !important;
+    font-family: 'Inter', sans-serif;
+}
+.footer-info__wrapper .footer-item__link {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+
+    line-height: 30px;
+}
+.footer-item:hover {
+    transform: scale(1.1);
+    transition: .25s;
+}
+.footer-item__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 28px;
+}
+.footer-item__link:hover {
+    color: var(--text-color);
+   
+}
+.footer__social-buttons {
+    display: flex;
+    max-width: 192px;
+    justify-content: space-between;
+}
+.footer__social-buttons i {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 2.25rem;
+}
+.fa-facebook {
+    background: -webkit-linear-gradient(rgba(23,169,253,1) 40%, rgba(1,101,225,1) 70%);
+}
+i.fa-linkedin {
+    -webkit-text-fill-color: #0A66C2;
+}
+i.fa-tiktok {
+    -webkit-text-fill-color: #000;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .footer--bottom-section {
+        padding: 1rem;
+        justify-content: unset;
+    }
+    .footer-info__wrapper {
+        margin-left: 4px;
+        margin-right: 2rem;
+    }
+    .footer-logo__wrapper {
+        margin-bottom: .2rem;
+    }
+    .footer-logo__brand {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .footer-col__wrapper {
+        margin-top: 1rem !important;
+    }
+    .footer-col__wrapper:nth-child(4) {
+        margin-left: 2rem !important;
+    }
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footer--bottom-section {
+        padding: 1rem 4rem;
+        justify-content: space-between;
+    }
+    .footer-info__wrapper {
+        margin-left: 4px;
+        margin-right: 2rem;
+    }
+    .footer-logo__wrapper {
+        margin-bottom: .2rem;
+    }
+    .footer-logo__brand {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .footer-col__wrapper {
+        margin-top: 1rem !important;
+    }
+    .footer-col__wrapper:nth-child(4) {
+        margin-left: 2rem !important;
+    }
+    
+}
+/* Large devices (large desktops, 992px and 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footer--bottom-section {
+        padding: 24px 10px 80px;
+        justify-content: unset;
+    }
+    .footer-info__wrapper {
+        margin-left: 0.5rem;
+    }
+    .footer-col__wrapper:nth-child(4) {
+        width: 22%;
+    }
+}
+/* X-Large devices (X-large desktops, 1200px and 1399px) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .footer--bottom-section {
+        padding: 24px 50px 80px;
+        justify-content: space-around;
+    }
+   
+}

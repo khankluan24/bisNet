@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+        integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/register-main.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <style></style>
+
+    <!--    Notification-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <div class="container bg-white mb-0">
+        <div class="row">
+            <main class="form-signup">
+                <form>
+                    <img class="mb-4" src="../assets/img/logo.png" alt="">
+                    <h1 class="register-title h3">Đăng ký trở thành thành viên</h1>
+                    <p class="register-sub-title">Hãy nhập thông tin bên dưới để đăng ký tài khoản</p>
+                    <div class="form text-start mb-3">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" id="full_name_register" placeholder="Nhập họ và tên">
+                    </div>
+                    <!--.form--->
+                    <div class="form text-start mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" id="email_register" placeholder="Nhập email">
+                    </div>
+                    <!--.form--->
+                    <div class="form text-start mb-3">
+                        <label>Số điện thoại</label>
+                        <input type="text" class="form-control" id="phone_register" placeholder="Nhập số điện thoại">
+                    </div>
+                    <!--.form--->
+                    <div class="form text-start mb-3">
+                        <label>Mật khẩu</label>
+                        <input type="password" class="form-control" id="pass_register" placeholder="Nhập mật khẩu">
+                        <p class="note">Vui lòng nhập mật khẩu từ 8 ký tự trở lên, bao gồm chữ VIẾT HOA, chữ số và ký tự
+                            đặc
+                            biệt</p>
+                    </div>
+                    <!--.form--->
+                    <div class="form text-start mb-3">
+                        <label>Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="confirm_pass" placeholder="Nhập lại mật khẩu">
+                        <p class="note">Vui lòng nhập theo mật khẩu đã tạo ở trên</p>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label class="agree-service">
+                            <input type="checkbox" value="remember-me">Tôi đồng ý với<a href="#"> &nbsp;Điều khoản dịch
+                                vụ&nbsp;</a>và<a href="#">&nbsp;Chính sách bảo mật</a>
+                        </label>
+                    </div>
+                    <a onclick="registerHere()" class="register-btn text-uppercase w-100 btn btn-lg" type="submit">
+                        <img src="../assets/img/mail-icon.png" class="me-2" alt="Mail icon">
+                        ĐĂNG Ký
+                    </a>
+                    <p class="signin-notify mt-3 text-muted">Bạn đã có tài khoản?<a href="./login.html"> Hãy đăng
+                            nhập</a></p>
+                </form>
+            </main>
+            <!--.form-signup-->
+        </div>
+    </div>
+
+    <!--.subscribe-->
+    <div id="subscribe"></div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../Js/Authenticate.js"></script>
+    <script>
+        $('#header').load("../component/header.html");
+        $('#subscribe').load("../component/subscribe.html");
+        $('#footer').load("../component/footer.html");
+        $('#fb-root').load("../component/chat.html");
+    </script>
+</body>

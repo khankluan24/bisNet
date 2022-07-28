@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bis Net</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@800&family=Poppins:wght@500;600&display=swap"
+            rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+            type="text/css" />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+            integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"
+            integrity="sha512-QDsjSX1mStBIAnNXx31dyvw4wVdHjonOwrkaIhpiIlzqGUCdsI62MwQtHpJF+Npy2SmSlGSROoNWQCOFpqbsOg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+            integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" href="../assets/css/base.css">
+      <link rel="stylesheet" href="../assets/css/post-visitor.css">
+      <link rel="stylesheet" href="../assets/css/post-user.css">
+      <link rel="stylesheet" href="./assets/css/search-page.css">
+      <style></style>
+</head>
+
+<body>
+
+      <header id="header-user"></header>
+      <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+      <div class="container mt-4">
+            <div class="row">
+                  <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                              <div class="ibox-content">
+                                    <h2 id="value"></h2>
+                                    <div class="search-form-1 mt-3">
+                                          <div class="input-group">
+                                                <input type="text" placeholder="Nhập thông tin tìm kiếm"
+                                                      id="searchValue" name="search" class="form-control input-lg">
+                                                <div class="input-group-btn">
+                                                      <button onclick="getsearchvalue()" class="btn">Tìm kiếm</button>
+                                                </div>
+                                          </div>
+                                    </div>
+                                          <div class="search-result" id="list_results">
+                                          </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div id="subscribe"></div>
+      
+      <footer id="footer"></footer>
+      <script>
+            $('#header-user').load("../component/header-user.html");
+            $('#subscribe').load("../component/subscribe.html");
+            $('footer#footer').load("../component/footer.html");
+            $('#fb-root').load("./component/chat.html");
+      </script>
+      <script src="../Js/Search.js"></script>
+     <script src="../Js/GetUserDetail.js"></script>
+</body>

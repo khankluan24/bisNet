@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bis Net</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@800&family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"
+    integrity="sha512-QDsjSX1mStBIAnNXx31dyvw4wVdHjonOwrkaIhpiIlzqGUCdsI62MwQtHpJF+Npy2SmSlGSROoNWQCOFpqbsOg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/FAQ.css">
+  <link rel="stylesheet" href="./assets/css/utils.css">
+  <style></style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header"></header>
+     <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+  <!-- Main -->
+  <main>
+    <section class="faq">
+      <ul class="categories">
+        <li><a class="selected " href="#account">Tài khoản</a></li>
+        <li><a href="#course">Khóa học</a></li>
+        <li><a href="#certificate">Chứng chỉ</a></li>
+        <li><a href="#payments">Thanh toán</a></li>
+        <li><a href="#privacy">Quyền riêng tư</a></li>
+      </ul> <!-- categories -->
+
+      <div class="faq-items">
+        <ul id="account" class="faq-group">
+          <li class="faq-title">
+            <h2>TÀI KHOẢN</h2>
+          </li>
+          <li>
+            <a class="trigger" href="#0">Thiết lập tài khoản?</a>
+            <div class="faq-content">
+              <p>Để bắt đầu tham gia các lớp học và tải các tài liệu trên Bis.net, bạn cần phải thiết lập một tài khoản.</p>
+              <ol start="1">
+                <li>Truy cập BIS.NET</li>
+                <li>Ở đầu trang, nhấp vào Đăng ký</li>
+                <li>Chọn xem bạn muốn cung cấp tên, email và mật khẩu hoặc liên kết tài khoản Bis.net với hồ sơ Facebook, tài khoản Google</li>
+                <li>Nếu bạn chọn tạo tài khoản Bis.net mới bằng tên, email và mật khẩu, thì mật khẩu của bạn phải có 8 ký tự trở lên</li>
+              </ol>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Tôi không thể đăng nhập?</a>
+            <div class="faq-content">
+              <p>Nếu bạn gặp sự cố khi đăng nhập, hãy làm theo các bước sau:</p>
+              <ol>
+                <li>Kiểm tra kỹ địa chỉ email của bạn xem có lỗi chính tả hoặc ký tự không chính xác nào không. Địa chỉ email phải khớp chính xác với những gì bạn đã nhập khi bắt đầu tài khoản của mình.</li>
+                <li>Sử dụng các bước trong bài viết của chúng tôi về cách đặt lại mật khẩu của bạn .</li>
+                <li>Nếu trước đó bạn đã kết nối tài khoản Facebook, Google hoặc Apple, hãy thử đăng nhập bằng một trong các tùy chọn đó. Chỉ kết nối các tài khoản sử dụng cùng địa chỉ email bạn đang sử dụng với Bis.net, nếu không bạn sẽ tạo tài khoản thứ hai.
+                </li>
+                <li>Nếu bạn vẫn gặp sự cố khi đăng nhập, hãy kiểm tra nhiều tài khoản . Có thể do lỗi chính tả hoặc lỗi khác đã tạo tài khoản thứ hai.
+                </li>
+              </ol>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Tôi không thể xác minh email của mình?</a>
+            <div class="faq-content">
+              <p>Khi bạn đăng ký tài khoản, chúng tôi sẽ gửi một email có liên kết cho phép bạn xác minh tài khoản.</p>
+              <P>Nếu bạn không thể tìm thấy email xác minh, hãy thử tìm kiếm trong hộp thư đến email của bạn cho "Hành động bắt buộc: Vui lòng xác nhận email của bạn." Hãy nhớ kiểm tra thư mục thư rác của bạn và đảm bảo rằng bạn đã đăng nhập vào hộp thư đến của email bạn đã sử dụng để tạo tài khoản của mình.</P>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Thông báo lỗi: “Chúng tôi không thể tìm thấy tài khoản được liên kết với địa chỉ email đó”</a>
+            <div class="faq-content">
+              <p>Bạn có thể thấy thông báo lỗi này khi đăng nhập nếu:</p>
+              <ul>
+                <li>Bạn đã sử dụng một địa chỉ khác khi tạo tài khoản Bis.net. Hãy thử đăng nhập bằng bất kỳ địa chỉ email nào khác mà bạn thường xuyên sử dụng. Nếu gần đây bạn đã nhận được email từ Bis.net hãy kiểm tra xem chúng tôi đã gửi email đến địa chỉ nào và sử dụng địa chỉ đó để đăng nhập.
+                </li>
+                <li>Bạn đã nhập sai địa chỉ email của mình khi tạo tài khoản Bis.net. Hãy thử nhập các lỗi chính tả hoặc biến thể phổ biến trên địa chỉ email của bạn.</li>
+                <li>Bạn đã vô tình tạo tài khoản thứ hai bằng cách đăng nhập bằng tài khoản Facebook, Google sử dụng email khác với email bạn đã sử dụng khi đăng ký Bis.net </li>
+              </ul>
+            </div> <!-- faq-content -->
+          </li>
+        </ul> <!-- faq-group -->
+
+        <ul id="course" class="faq-group">
+          <li class="faq-title">
+            <h2>Đăng ký khóa học</h2>
+          </li>
+          <li>
+            <a class="trigger" href="#0">Đăng ký một khóa học?</a>
+            <div class="faq-content">
+              <p>Để tham gia một khóa học trên Bis.net, bạn cần chọn một tùy chọn và đăng ký</p>
+              <ol>Các bước đăng ký:
+                <li>Mở trang mô tả khóa học bằng cách nhấp vào tiêu đề khóa học.</li>
+                <li>Nhấp vào Đăng ký .
+                </li>
+                <li>Chọn một tùy chọn 
+                </li>
+                <ul class="ps-3 font-size-12">Khi đăng ký một khóa học , bạn sẽ thấy các tùy chọn trả phí hoặc miễn phí khác nhau tùy thuộc vào khóa học. Các tùy chọn này có thể bao gồm:
+                  <li>Thanh toán cho chứng chỉ khóa học</li>
+                  <li>Đăng ký một chuyên ngành
+                  </li>
+                  <li>Đăng ký Bis.net subscriber
+                  </li>
+                  <li>Hỗ trợ tài chính hoặc học bổng
+                  </li>
+                  <li>Chỉ kiểm tra
+                  </li>
+                  <li>Toàn khóa học, không cần chứng chỉ</li>
+                </ul>
+              </ol>
+              <p class="mt-2">Tùy chọn bạn chọn có thể ảnh hưởng đến lượng nội dung khóa học mà bạn có thể xem và tham gia. Bất kể lựa chọn của bạn là gì, bạn sẽ có quyền truy cập vào nội dung khóa học tương tự sau khi hoàn thành mà bạn đã làm trong suốt khóa học, bao gồm xem xét bài tập và tải xuống video và bảng điểm.
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Xem các khóa học bạn đã đăng ký
+            </a>
+            <div class="faq-content">
+              <p>Khi bạn đã đăng ký một khóa học, bạn sẽ thấy khóa học đó trên trang chủ Bis.net của mình khi đăng nhập. Hãy nhấp vào Đang tiến hành hoặc Đã hoàn thành để xem tất cả các khóa học trong các danh mục đó.
+              </p>
+              <p>Nếu bạn đăng ký tùy chọn trả phí cho bất kỳ khóa học nào trong Chuyên ngành , bạn sẽ thấy tất cả các khóa học trong Chuyên ngành trên trang chủ Bis.net của mình ngay cả khi bạn chưa đăng ký hoặc trả tiền cho chúng.
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Tham gia lại một khóa học
+            </a>
+            <div class="faq-content">
+              <p>Nếu bạn cần phải học lại một khóa học, bất kỳ tiến bộ nào bạn đã đạt được đều sẽ được thực hiện. Bạn không thể đặt lại tiến độ trong một khóa học, nhưng một số câu đố và bài tập sẽ cho phép bạn thực hiện lại chúng. Chúng tôi sẽ lưu điểm cao nhất của bạn.
+              </p>
+              <p>Nếu bạn gặp vấn đề với điểm trong bài tập mà bạn không thể làm lại, hãy liên hệ với người hướng dẫn của bạn để yêu cầu ghi đè.
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Hủy đăng ký một khóa học 
+            </a>
+            <div class="faq-content">
+              <p>Nếu bạn quyết định không hoàn thành một khóa học, bạn có thể hủy đăng ký.
+              </p>
+              <p>Khi bạn hủy đăng ký một khóa học
+              </p>
+              <ul>
+                <li>Nếu bạn đã đăng ký, đăng ký của bạn sẽ không bị hủy khi bạn hủy đăng ký. Bạn sẽ cần phải hủy đăng ký của mình nếu bạn muốn ngừng thanh toán hàng tháng.
+                </li>
+                <li>Nếu bạn đã thanh toán cho khóa học, bạn có thể yêu cầu hoàn lại tiền .
+                </li>
+                <li>Bạn sẽ mất quyền truy cập vào bất kỳ bài tập nào bạn đã gửi.
+                </li>
+                <li>Bạn sẽ không thể thấy bất kỳ phản hồi hoặc điểm nào trong khóa học đó.
+                </li>
+                <li>Thời hạn cá nhân hóa của bạn sẽ biến mất. Nếu bạn đăng ký lại khóa học, bạn sẽ nhận được thời hạn mới được cá nhân hóa dựa trên ngày bạn đăng ký lại.
+                </li>
+              </ul>
+              <ol>Để hủy đăng ký một khóa học:
+                <li>Đăng nhập vào tài khoản Bis.net của bạn.
+                </li>
+                <li>Đi tới Khóa học của tôi .
+                </li>
+                <li>Bên cạnh khóa học bạn muốn hủy đăng ký, hãy nhấp vào dấu ba chấm để mở menu</li>
+                <li>Chọn Hủy đăng ký khỏi Khóa học.
+                </li>
+                <li>Trên cửa sổ bật lên, nhấp vào Hủy đăng ký.
+                </li>
+              </ol>
+            </div> <!-- faq-content -->
+          </li>
+        </ul> <!-- faq-group -->
+
+        <ul id="certificate" class="faq-group">
+          <li class="faq-title">
+            <h2>Chứng chỉ</h2>
+          </li>
+          <li>
+            <a class="trigger" href="#0">Nhận chứng chỉ khóa học?</a>
+            <div class="faq-content">
+              <p>Bạn có thể kiếm được Chứng chỉ khóa học cho hầu hết các Khóa học của Bis.net. Chứng chỉ Khóa học là bằng chứng cho thấy bạn đã hoàn thành và vượt qua khóa học.
+              </p>
+              <ul> Để nhận được Chứng chỉ khóa học, bạn phải:
+                <li>Hoàn thành xác minh tên. (bao gồm việc gửi ảnh và CCCD đã được xác minh)</li>
+                <li>Vượt qua tất cả các bài tập bắt buộc trong khóa học hoặc đạt ngưỡng vượt qua khóa học cho một khóa học được xếp loại tích lũy
+                </li>
+                <li>Thanh toán lệ phí Chứng chỉ Khóa học 
+                </li>
+              </ul>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Nâng cấp chứng chỉ khóa học 
+            </a>
+            <div class="faq-content">
+              <p>Nếu bạn tham gia một khóa học ở chế độ kiểm tra, bạn có thể nâng cấp lên Chứng chỉ trả phí bất kỳ lúc nào trong hoặc sau khi kiểm tra.
+              <br>
+              Nếu bạn trả tiền cho Chứng chỉ trong một khóa học bạn đã tham gia, mọi điểm bạn đã đạt được sẽ được lưu, nhưng bạn có thể cần phải hoàn thành thêm các môn học khác chưa có trong phiên bản kiểm tra.              </p>
+              <ol>Để nâng cấp lên Chứng chỉ trong một khóa học bạn đã đăng ký:
+                <li>Mở khóa học bạn muốn trả phí.
+                </li>
+                <li>Mở tab Điểm .
+                </li>
+                <li>Mở bất kỳ bài tập nào và nhấp vào  Nâng cấp.
+                </li>
+                Không phải tất cả các khóa học đều cung cấp Chứng chỉ. Nếu bạn không thể tìm thấy tùy chọn để nâng cấp lên Chứng chỉ trong một khóa học, nó có thể không khả dụng.
+              </ol>
+            </div> <!-- faq-content -->
+          </li>
+        </ul> <!-- faq-group -->
+
+        <ul id="payments" class="faq-group">
+          <li class="faq-title">
+            <h2>Thanh toán</h2>
+          </li>
+          <li>
+            <a class="trigger" href="#0">Thanh toán trên Bis.net
+            </a>
+            <div class="faq-content">
+              <p>Để nhận được Chứng chỉ khóa học cho một khóa học, bạn sẽ cần phải trả một khoản phí. Đối với một số khóa học, việc trả phí cũng cho phép bạn truy cập vào các tính năng khác của khóa học, chẳng hạn như các bài tập đã được chấm điểm.
+                <br>
+                Để tìm hiểu thêm về các tùy chọn thanh toán, hãy xem Các phương thức thanh toán được chấp nhận .
+                <br>
+                Bạn có thể xem chi phí của một khóa học trên trang mô tả khóa học. Các khoản thanh toán ở một số khu vực có thể bao gồm thuế bán hàng. Thuế bán hàng sẽ được liệt kê trên trang thanh toán của bạn.
+              </p>
+              <ul>Giá khóa học cho phép người đăng tải khóa học quyết định dưới sự kiểm duyệt nội dung đến từ các bộ phận của Bis.net dựa trên các tiêu chí 
+                <li>Nội dung khóa học
+                </li>
+                <li>Chất lượng hình ảnh
+                </li>
+                <li>Kỹ thuật và chuyên môn người hướng dẫn
+                </li>
+                <li>Thời lượng khó học
+                </li>
+                <li>Hình thức giảng dạy
+                </li>
+                Ngoài ra Bis.net cũng sẽ có các khóa học miễn phí ngắn hạn cùng các chính sách ưu đãi giảm giá cho các học viên là học sinh sinh viên (có yếu tố xác thực)
+              </ul>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Chính sách thanh toán</a>
+            <div class="faq-content">
+              <p>Nếu bạn bắt đầu tham gia một khóa học miễn phí hay muốn nâng cấp tài khoản, bạn có thể trả tiền cho khóa học bất kỳ lúc nào. Sau khi bạn thanh toán cho một khóa học, bất kỳ bài tập nào bạn đã nộp trước khi thanh toán sẽ được tính vào Chứng chỉ của bạn.
+              </p>
+              <h6>Chính sách thanh toán trước khi đăng ký
+              </h6>
+              <p>Một số khóa học cho phép bạn đăng ký trước và thanh toán học phí trước khi khóa học mở tương tự như việc nâng cấp tài khoản cũng cần phải được thanh toán trước
+                <br>
+                Nếu bạn thanh toán cho một khóa học mới trước ngày bắt đầu khóa học, thì thời gian hoàn lại tiền, chứng chỉ đủ điều kiện và thời hạn truy cập tính năng của bạn sẽ bắt đầu vào ngày bắt đầu của khóa học, không phải vào ngày thanh toán của bạn.
+
+              </p>
+              <h6>Chính sách thanh toán khóa học
+              </h6>
+              <p>
+                Khi bạn thanh toán cho một khóa học, khoản thanh toán của bạn sẽ hết hạn sau 6 tháng  ngày kể từ ngày thanh toán hoặc 6 tháng kể từ ngày bắt đầu khóa học, tùy theo ngày nào muộn hơn. Trong thời gian 6 tháng này bạn có thể tham gia  các lớp học online được tổ chức bởi người hướng dẫn hoặc là các video quay sẵn ( Đối với các lớp học trực tuyến nội dung sẽ được record và cho phép bạn xem lại nhiều lần trong 6 tháng tương tự đối với các video là khá học quay sẵn )
+                <br>
+                Chính sách hết hạn này có thể khác đối với một số khóa học. Kiểm tra trang thông tin của khóa học và email xác nhận thanh toán của bạn để biết bất kỳ trường hợp ngoại lệ nào.
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Các phương thức thanh toán được chấp nhận
+            </a>
+            <div class="faq-content">
+              <p>Thẻ tín dụng
+                <ul class="font-size-14">Bạn có thể thực hiện thanh toán trên Bis.net bằng các thẻ tín dụng sau:
+                  <li>Visa</li>
+                  <li>MasterCard</li>
+                  <li>JCB </li>
+                  <li>American Express (chỉ dành cho các khóa học tính bằng $ USD)</li>
+                </ul>
+              </p>
+              <p>Thẻ trả trước
+                <p class="font-size-14">Bạn có thể sử dụng thẻ trả trước của một trong các nhãn hiệu thẻ tín dụng trên để thanh toán một lần. Bạn không thể sử dụng thẻ trả trước để đăng ký Bis.net.
+                </p>
+              </p>
+              <p>Thẻ ghi nợ
+                <p class="font-size-14">Bạn có thể thanh toán trên Bis.net bằng thẻ ghi nợ Visa hoặc Mastercard. Bạn không thể sử dụng thẻ trả trước để thanh toán đăng ký.
+                </p>
+              </p>
+              <p>PayPal
+                <p class="font-size-14">Bạn có thể thực hiện thanh toán trên Bis.net bằng PayPal. Ở Ấn Độ, bạn chỉ có thể sử dụng PayPal để thanh toán cho các khóa học cá nhân. 
+                </p>
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+        </ul> <!-- faq-group -->
+
+        <ul id="privacy" class="faq-group">
+          <li class="faq-title">
+            <h2>Quyền riêng tư</h2>
+          </li>
+          <li>
+            <a class="trigger" href="#0">Quản lý thông tin xấu
+            </a>
+            <div class="faq-content">
+              <ul >Nghiêm cấm Học viên thực hiện một trong các hành động như dưới đây:
+                <li class="mt-2">Đăng tải các thông tin trái với quy định của pháp luật của Việt Nam và quốc tế, xâm phạm quyền lợi của bên thứ ba, và trái với các quy định đã được đăng tải trên website https://bis.net.vn</li>
+                <li>Sử dụng trái phép tài khoản, bài đăng, giao dịch của người khác
+                </li>
+                <li>Đăng các nội dung gây hiểu lầm, không chính xác, xuyên tạc, gian lận hoặc vi phạm quy định của pháp luật
+                </li>
+                <li>Gửi thư rác
+                </li>
+                <li>Sử dụng virus, phần mềm độc hại… gây ảnh hưởng đến hoạt động của trang web hay xâm phạm đến quyền lợi tài sản của người khác
+                </li>
+                <li>Copy hoặc sửa đổi nội dung của website https://bis.net.vn bao gồm bản quyền, logo, nhãn hiệu
+                </li>
+                <li>Sử dụng thông tin của Học viên khác mà không được sự đồng ý của họ
+                </li>
+              </ul>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Những gì bạn đồng ý khi sử dụng trang web của chúng tôi</a>
+            <div class="faq-content">
+              <ul> Chúng tôi cho rằng các cơ sở pháp lý để sử dụng thông tin cá nhân của bạn như được nêu trong Thông báo về Quyền riêng tư này như sau:
+                <li class="mt-2">Việc chúng tôi sử dụng thông tin cá nhân của bạn là cần thiết để thực hiện các nghĩa vụ của chúng tôi theo bất kỳ hợp đồng nào với bạn (ví dụ: tuân thủ Điều khoản Sử dụng Trang web của chúng tôi mà bạn chấp nhận bằng cách duyệt trang web của chúng tôi và / hoặc tuân thủ hợp đồng của chúng tôi để cung cấp Dịch vụ cho bạn, tổ chức học thuật của bạn, chủ lao động của bạn hoặc tổ chức khác có thể cung cấp cho bạn quyền truy cập vào Dịch vụ của chúng tôi) hoặc
+                </li>
+                <li>việc chúng tôi sử dụng thông tin cá nhân của bạn là cần thiết để tuân thủ các nghĩa vụ pháp lý của chúng tôi hoặc
+                </li>
+                <li>việc sử dụng thông tin cá nhân của bạn là cần thiết vì lợi ích hợp pháp của chúng tôi hoặc lợi ích hợp pháp của người khác. Lợi ích hợp pháp của chúng tôi là:
+                </li>
+                <li>đồng ý, để gửi cho bạn một số thông tin liên lạc hoặc nơi bạn gửi một số thông tin nhất định cho chúng tôi, hoặc khi được yêu cầu dựa trên sự đồng ý của luật pháp địa phương.
+                </li>
+              </ul>
+            </div> <!-- faq-content -->
+          </li>
+
+          <li>
+            <a class="trigger" href="#0">Bảo mật & Bảo mật thông tin nhận dạng cá nhân
+            </a>
+            <div class="faq-content">
+              <p>Chúng tôi sẽ sử dụng các biện pháp bảo mật vật lý, kỹ thuật và hành chính tiêu chuẩn ngành để giữ bí mật và an toàn cho Dữ liệu cá nhân của bạn, đồng thời sẽ không chia sẻ dữ liệu đó với bên thứ ba, trừ khi có quy định khác trong Thông báo về quyền riêng tư này, hoặc trừ khi việc tiết lộ đó là cần thiết trong những trường hợp đặc biệt, chẳng hạn như một mối đe dọa về thể chất đối với bạn hoặc những người khác, khi được luật hiện hành cho phép. Vì Internet không phải là môi trường an toàn 100%, chúng tôi không thể đảm bảo tính bảo mật của Dữ liệu Cá nhân và có một số rủi ro rằng bên thứ ba trái phép có thể tìm cách phá vỡ hệ thống bảo mật của chúng tôi hoặc việc truyền thông tin của bạn qua Internet sẽ bị chặn. Bạn có trách nhiệm bảo vệ an toàn thông tin đăng nhập của mình. Xin lưu ý rằng thông tin liên lạc qua e-mail thường không được mã hóa và không được coi là an toàn
+              </p>
+            </div> <!-- faq-content -->
+          </li>
+        </ul> <!-- faq-group -->
+      </div> <!-- faq-items -->
+      <a href="#0" class="cd-close-panel">Close</a>
+    </section> <!-- faq -->
+
+    <!--.subscribe-->
+    <div id="subscribe"></div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+    
+  <script>
+     $('#header').load("./component/header.html"); 
+      $('#subscribe').load("./component/subscribe.html"); 
+      $('#category').load("./component/category.html"); 
+      $('#footer').load("./component/footer.html"); 
+    $('#fb-root').load("./component/chat.html");
+  </script>
+  <script src="/Js/FAQ.js"></script>
+</body>
+
+</html>

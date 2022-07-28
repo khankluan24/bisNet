@@ -1,0 +1,170 @@
+/* Left sidebar */
+    /* course Header */
+    .course-header__title {
+        font-weight: 700;
+        font-size: 36px;
+    
+        color: var(--heading-color);
+    }
+    .course-info {
+        margin-top: 48px;
+    }
+    ul.course-info__tabs {
+        align-items: center;
+        border-bottom: none;
+        margin-bottom: 40px;
+    }
+    .course-info__tabs li {
+        margin-right: 2rem;
+    }
+    .course-info__tabs li:hover,
+    .course-info__tabs li:focus {
+        background-color: transparent;
+    }
+    .course-info__tabs button {
+        color: #9AA8BD !important;
+    }
+    .course-info__tabs button:focus,
+    .course-info__tabs button:hover{
+        background-color: transparent !important;
+        border-color: transparent !important;
+        font-weight: 700;
+    }
+    .course-tab-content .heading {
+        font-weight: 700;
+        font-size: 20px;
+                
+        color: var(--button-color);
+        margin-bottom: 40px;
+    }
+    .course-tab-content .container {
+        font-weight: 500;
+        font-size: 16px;
+
+        color: #000000;
+    }
+    .tab-pane .container hr {
+        background-color: #c4c4c4;
+        opacity: 1;
+    }
+    .tab-content__course-name li {
+        list-style: none;
+    }
+    .tab-content__certificate a {
+        display: block;
+        max-width: 315px;
+
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 14px;
+        
+        color: #ACACAC;
+    }
+    .tab-content__desc {
+        position: relative;
+    }
+    .tab-content__desc .overlay {
+        width: 872px;
+        height: 232px;
+        background-color: white;
+        position: absolute;
+        opacity: 0.9;
+        display: block;
+        top: 124px;
+    }
+    .click-course-more {
+        font-weight: 500;
+        font-size: 18px;
+
+        color: var(--button-color);
+        text-decoration: none;
+    }
+    .search-comment__container form {
+        padding: 6px 12px;
+        max-height: 42px;
+    }
+    .question-search {
+        border: 1px solid #F1F1F1;
+    }
+    .question-search:focus-within {
+        border-color: #C20000 !important;
+        box-shadow: 0 0 0 0.25rem rgb(194 0 0 / 25%) !important
+    }
+    .question-search input {
+        margin-left: 12px;
+    }
+    .question-search input:focus {
+        box-shadow: none !important;
+        border-color: transparent !important;
+    }
+    /* Right sidebar */
+    div.course-route__item, button.accordion-button {
+        background-color: transparent;
+    }
+    button.accordion-button {
+        font-weight: 700;
+        font-size: 16px;
+        
+        color: #000000;
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    button.accordion-button:not(.collapsed) {
+        color: #C20000;
+        background-color: rgb(211 47 47 / 10%);
+    }
+    button.accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D32F2F'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+    .accordion-button .heading {
+        max-width: 236px;
+        line-height: 28px;
+        margin-bottom: 4px;
+    }
+    .accordion-button .trackAndTime {
+        font-weight: 400;
+        font-size: 12px;
+        font-family: 'Inter';
+
+        color: #000000;
+        margin-bottom: 0;
+    }
+    .accordion-button::after {
+        top: 28%;
+        position: absolute;
+        right: 2%;
+    }
+    div.lession-track {
+        margin-bottom: 16px;
+        padding-left: 0;
+    }
+    .lession-track .lession-name {
+        font-weight: 400;
+        font-size: 14px;
+        font-family: 'Inter';
+
+        color: #000000;
+        margin-bottom: 8px;
+    }
+    .lession-track .lession-direct {
+        color: #000000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .lession-direct svg {
+        margin-right: 8px;
+    }
+/* Medium devices (tablets, 768px and up) */ 
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .course-route__item-body {
+        padding: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .course-route__item-body {
+        padding: 1rem;
+    }
+}

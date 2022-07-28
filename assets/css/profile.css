@@ -1,0 +1,234 @@
+
+/* profile */
+.profile_page .profile_group {
+    margin-top: 24px;
+    height: 300px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(73, 83, 104, 0.15);
+    border-radius: 12px;
+}
+
+.profile_page .profile_banner {
+
+}
+
+.profile_page .profile_banner .img_banner_profile {
+    width: 100%;
+    height: 214px;
+    object-fit: cover;
+}
+
+.profile_page .profile {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    bottom: 26px;
+    left: 30px;
+}
+
+.profile_page .avatar_profile {
+    overflow: hidden;
+    position: relative;
+}
+
+.profile_page .avatar_profile .img_avatar_profile {
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.avatar_profile:hover .img_avatar_profile
+, .avatar_profile:hover .small-camera__container{
+    cursor: pointer;
+    opacity: .95;
+}
+
+.profile_page .profile_infor p {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.small-camera__container {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #E4E6EB;
+    bottom: 6%;
+    right: 0;
+    text-align: center;
+    padding-top: 5%;
+}
+i[onclick="getLocation()"] {
+    cursor: pointer;
+    width: 50%;
+    height: 100%;
+}
+
+/* about profile */
+.profile_page .about_profile {
+    margin-top: 24px;
+    padding-top: 26px;
+    padding-bottom: 24px;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(73, 83, 104, 0.15);
+    border-radius: 12px;
+}
+
+.profile_page .about_infor {
+    margin-left: 30px;
+}
+
+.profile_page input {
+    padding-left: 25px;
+    width: 100%;
+    height: 42px;
+    background: #F8F9FB;
+    border: 1px solid #E2E9F3;
+    border-radius: 6px;
+}
+
+.profile_page select {
+    padding-left: 25px;
+    width: 100%;
+    height: 42px;
+    background: #F8F9FB;
+    border: 1px solid #E2E9F3;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.profile_page .form_item {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.profile_page .form_group i,
+.profile_page .social_form i {
+    position: absolute;
+    top: 37px;
+    left: 5px;
+    color: #8A8C8E;
+}
+
+.profile_page .date_group {
+    display: flex;
+}
+
+.profile_page .date_group .gender_form {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.profile_page .date_group .date_form {
+    flex: 1;
+}
+
+.profile_page .social_form {
+    position: relative;
+    margin-left: 2px;
+    margin-bottom: 16px;
+}
+
+.profile_page .about_social {
+    padding-right: 30px;
+}
+
+.fs_14 {
+    font-size: 14px;
+}
+
+.fs_16 {
+    font-size: 16px;
+}
+
+.fs_18 {
+    font-size: 18px;
+}
+
+.fs_20 {
+    font-size: 20px;
+}
+
+.cl_red {
+    color: #C20000;
+}
+
+.fw_600 {
+    font-weight: 600;
+}
+
+.fw_700 {
+    font-weight: 700;
+}
+.input_date {
+    cursor: pointer;
+}
+/* X-Small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+    .profile_page .profile {
+        bottom: 20px;
+        left: 4px;
+    }
+    .profile_infor {
+        font-size: 1rem !important;
+    }
+    .profile_page .profile_infor p {
+        margin-left: 12px;
+    }
+    .profile_page .about_infor {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+    input.input_date, .date_group select {
+        padding-left: 0.5rem;
+    }
+    .profile_page .about_social {
+        padding: 0 1rem;
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .profile_page .profile {
+        bottom: 20px;
+        left: 4px;
+    }
+    .profile_infor {
+        font-size: 1rem !important;
+    }
+    .profile_page .profile_infor p {
+        margin-left: 12px;
+    }
+    .profile_page .about_infor {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+    input.input_date, .date_group select {
+        padding-left: 0.5rem;
+    }
+    .profile_page .about_social {
+        padding: 0 1rem;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    input.input_date, .date_group select {
+        padding-left: 0.5rem;
+    }
+    .profile_page .about_infor {
+        margin-left: 1.5rem;
+    }
+    .profile_page .about_social {
+        padding-right: 2rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px){}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media only screen and (min-width: 1400px){}

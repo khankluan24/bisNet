@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bis Net</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@800&family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Font awesome -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/utils.css">
+  <link rel="stylesheet" href="./assets/css/profile.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <style></style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header-user" class="header"></header>
+  <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+  <!-- End Header -->
+
+  <!-- Main -->
+  <main>
+    <div class="container profile_page">
+      <section class="profile_group position-relative">
+        <div class="profile_banner position-relative">
+          <img class="img_banner_profile"
+            src="https://images.unsplash.com/photo-1653856114616-ec604cb38719" alt="">
+        </div>
+
+        <div class="profile">
+          <div class="avatar_profile" id="changeImage">
+            <img class="img_avatar_profile img-fluid" id="user_avatar"
+              src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+              <div class="small-camera__container">
+                <i class="fas fa-camera-alt font-size-20"></i>
+              </div>
+          </div>
+
+          <div class="profile_infor font-size-18">
+            <div class="infor_name fw_700">
+              <p id="name_user_infor"></p>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="about_profile">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="about_infor">
+              <p class="fs_20 cl_red fw_600">Giới thiệu</p>
+
+              <form class="form_group">
+                <div class="form_item fullname_group">
+                  <label for="fname">Tên đầy đủ:</label>
+                  <br>
+                  <input class="input_type" type="text" name="fname" id="name_user" placeholder="Tên đầy đủ">
+                  <i class="fa-solid fa-pencil"></i>
+                </div>
+                <div class="form_item email_group">
+                  <label for="fname">Email</label>
+                  <br>
+                  <input class="input_type" type="text" name="fname" id="email_user" placeholder="Email của bạn">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="form_item phone_group">
+                  <label for="fname">Số điện thoại</label>
+                  <br>
+                  <input class="input_type" type="text" name="fname" id="phone_user" placeholder="Số điện thoại của bạn">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+              
+                <div class="form_item address">
+                  <label for="fname">Địa chỉ</label>
+                  <br>
+                  <input class="input_type" type="text" name="fname" id="location_user" value="" placeholder="Địa chỉ của bạn">
+                  <i onclick="getLocation()" class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="form_item address">
+                  <label for="fname">Mô tả về bạn</label>
+                  <br>
+                  <input class="input_type" type="text" name="fname" id="description_user_input" placeholder="Mô tả về bạn">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="about_social">
+              <p class="fs_20 cl_red fw_600">About you</p>
+              <p>Tiểu sử</p>
+              <p id="description_user"></p>
+            </div>
+            <button class="btn text-capitalize" onclick="updateProfile()">Cập nhật thông tin</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--.subscribe-->
+    <div id="subscribe"></div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Footer -->
+ <footer id="footer"></footer>
+  
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./Js/GetUserDetail.js"></script>
+ <script src="./Js/profile.js"></script>
+ <script 
+ async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHRO0UtvBwc77H2V_ew7lfQudkP6z_DOI&callback=initMap"></script>
+  <script>
+      $('#header-user').load("./component/header-user.html"); 
+      $('#subscribe').load("./component/subscribe.html"); 
+      $('#footer').load("./component/footer.html");
+      $('#fb-root').load("./component/chat.html");
+    //   const desValue = $('#description_user_input');
+    //   function updateProfile()  {
+    //     document.getElementById('description_user').innerText = document.getElementById('description_user_input').value
+    //   }
+  </script>
+
+  
+</body>
+
+</html>

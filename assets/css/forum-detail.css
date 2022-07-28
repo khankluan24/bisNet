@@ -1,0 +1,122 @@
+.forum-detail .group_btn {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.forum-detail .media_btn {
+    display: flex;
+    align-items: center;
+}
+
+.forum-detail .media_btn p {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.forum-detail .infor_group {
+    margin-left: 20px;
+}
+
+.comment-reply {
+    border-left: 1px solid #C4C4C4;
+}
+
+.text-title p {
+    border-bottom: 2px solid #FF671D;
+    width: fit-content;
+}
+
+.w-h-48 {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+input.input_type {
+    height: 42px;
+}
+/* X-Small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+    .card-body {
+        padding: .5rem 1rem;
+    }
+    .post-upload {
+        width: 100%;
+    }
+    .reply-cmt__btn {
+        width: 50%;
+    }
+    .card-body--4 .comment-reply {
+        border-left: none;
+    }
+    div.avatar__other-container {
+        width: 70px;
+        height: 60px;
+    }
+    div.avatar__other-container img {
+        width: 100%;
+        height: 100%;
+    }
+    .kw-container {
+        padding: .5rem;
+    }
+    .kw-container > p:nth-child(n+4) {
+        display: none;
+    }
+    .popular-member > .avatar_group:nth-child(n+3) {
+        display: none;
+    }
+    input.kw-search {
+        padding-left: 1rem;
+    }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .post-upload {
+        width: 100%;
+    }
+    .reply-cmt__btn {
+        width: 50%;
+    }
+    .card-body--4 .comment-reply {
+        border-left: none;
+    }
+    div.avatar__other-container {
+        width: 70px;
+        height: 60px;
+    }
+    div.avatar__other-container img {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px){}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .popular-member .avatar {
+        width: 70px !important;
+        height: 60px !important;
+    }
+    .popular-member .avatar img{
+        width: 100%;
+        height: 100%;
+    }
+    .kw-search {
+        padding-left: 4px;
+    }
+    .kw-container {
+        padding: 0.5rem 1rem;
+    }
+    .popular-member {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px){}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media only screen and (min-width: 1400px){}

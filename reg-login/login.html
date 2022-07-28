@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+    type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="stylesheet" href="../assets/css/register-main.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+
+  <header id="header"></header>
+  <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+  <div class="container bg-white">
+    <div class="row">
+      <main class="form-signup">
+        <form>
+          <img class="mb-4" src="./assets/img/logo.png" alt="">
+          <h1 class="register-title h3">Chào mừng bạn đến với Bis.net</h1>
+          <p class="register-sub-title">Hãy nhập thông tin bên dưới để đăng nhập</p>
+          <div class="form text-start mb-3">
+            <label>Email đăng nhập</label>
+            <input class="form-control" id="email_input" placeholder="Nhập email đăng nhập">
+          </div>
+          <div class="form text-start mb-3">
+            <label>Mật khẩu</label>
+            <input type="password" class="form-control" id="pass_input" placeholder="Nhập mật khẩu">
+            <p class="note"></p>
+          </div>
+          <a onclick="loginHere()" class="register-btn w-100 btn btn-lg btn-primary"
+            style="border: 1px solid var(--secondary-color)">
+            <img src="../assets/img/mail-icon.png" class="me-2" alt="Mail icon">
+            ĐĂNG NHẬP
+          </a>
+
+          <div class="login-unsuccess">
+            <div>Email hoặc Mật khẩu của bạn không đúng!
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3D4756" class="bi bi-x ms-1 ms-md-3"
+                viewBox="0 0 16 16">
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </div>
+            <a href="#target1" role="button" class="forget-password" data-bs-toggle="collapse" aria-expanded="false"
+              aria-controls="target1">Bạn đã quên mật khẩu?</a>
+          </div>
+          <hr>
+          <div class="collapse" id="target1">
+            <form class="card mt-4 ">
+              <div class="card-body p-0" id="target2">
+                <div class="form-group text-start mb-4">
+                  <label for="email-for-pass" class="font-weight-400 font-size-14 ff-2 mb-2">Nhập email của bạn</label>
+                  <input class="form-control w-75" type="email" id="email-for-pass" required=""><small
+                    class="form-text text-muted">Nhập mật khẩu mà bạn đã đăng ký trên bis.net và chúng tôi sẽ gởi đường
+                    link đến email bạn</small>
+                </div>
+              </div>
+              <div class="card-footer bg-white pt-3">
+                <button onclick="sendForgotPassword()" class="btn btn-success"
+                  style="background-color: #198754; border-color: #198754;" type="button">Đặt lại mật khẩu</button>
+              </div>
+            </form>
+          </div>
+          <p class="signin-notify mt-3 text-muted">Bạn chưa có tài khoản? <a href="../reg-login/register-main.html">Đăng
+              ký ngay</a></p>
+        </form>
+      </main>
+
+    </div>
+  </div>
+
+  <div id="subscribe"></div>
+
+  <footer id="footer"></footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../Js/Authenticate.js"></script>
+  <script>
+    $('#header').load("../component/header.html");
+    $('#subscribe').load("../component/subscribe.html");
+    $('#footer').load("../component/footer.html");
+    $('#fb-root').load("../component/chat.html");
+  </script>
+
+</body>

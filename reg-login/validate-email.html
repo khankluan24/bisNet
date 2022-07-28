@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/utils.css">
+  <link rel="stylesheet" href="../assets/css/register-main.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <!--Notification-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header"></header>
+
+  <div class="container bg-white">
+    <div class="row">
+        <main class="form-signup">
+            <form>
+                <img class="mb-4" src="../assets/img/logo.png" alt="Logo icon">
+                <div class="mb-3">
+                    <img srcset="../assets/img/Email.png 1x" class="img-fluid" alt="Email icon">
+                </div>
+                <h1 class="register-title mb-0">Kiểm tra email đã nhập</h1>
+                <p class="register-sub-title lh-24">Chúng tôi đã gửi mã xác nhận đến trucle170920@gmail.com</p>
+                <a href="../index-user.html" class="register-btn w-75 btn btn-lg mb-3 text-capitalize"
+                    style="border: 1px solid var(--secondary-color)" type="submit">
+                    Verify email
+                </a>
+                <p class="font-weight-600 ff-2 font-size-14 cl-dark-2">Nếu bạn chưa nhận được mã xác nhận.
+                    <a href="" class="text-decoration-none cl-red-2 font-weight-600 ff-2 font-size-14">Gửi lại mã</a>
+                </p>
+            </form>
+        </main>
+    </div>
+    <!--.form-signup-->
+</div>
+
+  <!--.subscribe-->
+  <div id="subscribe"></div>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+
+  <script src="../Js/Authenticate.js"></script>
+  <script>
+    $('#header').load("../component/header.html");
+    $('#subscribe').load("../component/subscribe.html");
+    $('#footer').load("../component/footer.html");
+  </script>
+</body>

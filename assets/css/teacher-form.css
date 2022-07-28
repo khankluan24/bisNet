@@ -1,0 +1,52 @@
+.form-body div .form {
+    flex-basis: 48%;
+}
+.radio-container, 
+.radio-container label {
+    font-family: 'Montserrat';
+}
+.radio-container .form-check-input {
+    height: 1rem;
+    padding: 0;
+    margin-right: 8px;
+}
+.register-title {
+    color: var(--button-color);
+}
+.checkbox label a {
+    color: var(--button-color);
+}
+.form-body .return {
+    font-weight: 600;
+    font-size: 12px;
+}
+.form-body hr {
+    background-color: #CBCBCB;
+    opacity: 1;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+    div.hasCourse {
+        flex-basis: 40%;
+    }
+} 
+/* Small devices (landscape phones, 576px and up) */ 
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .hasCourse {
+        width: 25%;
+    }
+} 
+/* Medium devices (tablets, 768px and up)  */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    
+}
+
+/* Large devices (desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */ 
+@media only screen and (min-width: 1200px) and (max-width: 1399px){}
+
+/* XX-Large devices (larger desktops, 1400px and up) */ 
+@media only screen and (min-width: 1400px){}

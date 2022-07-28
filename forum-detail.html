@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bis Net</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@800&family=Poppins:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+    type="text/css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Font awesome -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./assets/css/utils.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/custome.css">
+  <link rel="stylesheet" href="./assets/css/forum-detail.css">
+  <style></style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header-user"></header>
+  <!-- End Header -->
+   <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+  <!-- Main -->
+  <main>
+    <div class="container forum-detail">
+      <div class="row mt-4 mt-lg-5">
+        <div class="col-12 col-lg-9">
+          <div class="name_group">
+            <h3>
+              Hello, Hoàng Trúc Vương
+            </h3>
+
+            <p class="mb-2 mb-lg-3">
+              Chào mừng bạn đến với diễn đàn trao đổi về dữ liệu
+            </p>
+          </div>
+
+          <!-- Posts -->
+          <div class="card border-radius-6 mb-4 mb-lg-5 box-shadow-grey">
+            <div class="card-body">
+              <h5 class="card-title mt-1 mt-lg-2 mb-3 mb-lg-4 ">Tạo bài viết</h5>
+
+              <div class="form-group">
+                <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Bạn đang nghĩ gì thế?"></textarea>
+              </div>
+
+              <div class="group_btn mb-2 mt-3 mt-lg-4 flex-column flex-md-row align-items-start align-items-md-center">
+                <div class="media_btn_group mb-2 mb-lg-0 d-flex">
+                  <div class="media_btn">
+                    <i class="fas fa-image font-size-16"></i>
+                    <p>Hình ảnh</p>
+                  </div>
+                  <p class="mb-0 mx-3">|</p>
+                  <div class="media_btn">
+                    <i class="fas fa-video font-size-16"></i>
+                    <p>Video</p>
+                  </div>
+                </div>
+
+                <button type="button" class="btn btn-danger post-upload">Đăng ngay</button>
+              </div>
+            </div>
+          </div>
+          <!-- Posts -->
+
+          <!-- Comment Single -->
+          <div class="card bg-grey-1 border-radius-6 py-2 box-shadow-grey">
+            <div class="card-body">
+              <div class="avatar_group">
+                <div class="avatar">
+                  <img class="img_avatar_profile"
+                    src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                </div>
+
+                <div class="infor_group">
+                  <p class="mb-1 cl-red-1 font-size-16 font-weight-600">Nguyễn Thanh Long</p>
+
+                  <div class="time_group d-flex align-items-center">
+                    <i class="fas fa-clock"></i>
+                    <p class="mx-2 mb-0">15 phút trước</p>
+                    <span class="badge badge-primary cl-blue-1 bg-badge-1">SQL server</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mt-3 mt-md-4">
+                <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="3"
+                  placeholder="Bạn đang nghĩ gì thế?"></textarea>
+              </div>
+
+              <div class="group_btn mt-3 mt-lg-4">
+                <div class="media_btn_group ps-2 ps-md-0 d-flex flex-column flex-md-row justify-content-start justify-content-md-between">
+                  <div class="media_btn">
+                    <i class="fas fa-heart cl-blue-2"></i>
+                    <p class="cl-red-1">7 Yêu thích</p>
+                  </div>
+
+                  <div class="media_btn mx-0 mx-md-3">
+                    <i class="fas fa-comment cl-blue-2"></i>
+                    <p class="cl-red-1">7 Bình luận</p>
+                  </div>
+                </div>
+
+                <button type="button" class="btn reply-cmt__btn">Trả lời</button>
+              </div>
+
+            </div>
+          </div>
+          <!-- Comment Single -->
+
+          <!-- Comment Reply -->
+          <div class="card bg-grey-1 border-radius-6 mt-4 mt-md-5 py-2 py-md-4 box-shadow-grey">
+            <div class="card-body">
+              <div class="avatar_group">
+                <div class="avatar">
+                  <img class="img_avatar_profile"
+                    src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                </div>
+
+                <div class="infor_group">
+                  <p class="mb-1 cl-red-1 font-size-16 font-weight-600">Hiếu HM</p>
+
+                  <div class="time_group d-flex align-items-center">
+                    <i class="fas fa-clock"></i>
+                    <p class="mx-2 mb-0">45 phút trước</p>
+
+                    <span class="badge badge-primary cl-blue-1 bg-badge-1">SQL server</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mt-3 mt-md-4">
+                <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="5"
+                  placeholder="Bạn đang nghĩ gì thế?">Em là sinh viên đang làm đồ án tốt nghiệp xây dựng một ứng dụng phân tán trên HQTCSDL oracle 11g. Em thực sự gặp khó khăn trong việc sử dụng dictionary của Oracle, em không biết là mình nên tạo một database dictionary riêng biệt hay là sử dụng dictionary có sẵn của Oracle để quản lý thông tin về bảng. Em xin thầy hướng dẫn cho em tài liệu để làm đề tài trên qua địa chỉ mail: hminhtam07cntt@gmail.com. Kính chào thầy !</textarea>
+              </div>
+
+              <div class="group_btn mt-2">
+                <div class="media_btn_group ps-2 ps-md-0 d-flex flex-column flex-md-row justify-content-start justify-content-md-between">
+                  <div class="media_btn">
+                    <i class="fas fa-heart cl-blue-2"></i>
+                    <p class="cl-red-1">7 Yêu thích</p>
+                  </div>
+
+                  <div class="media_btn mx-0 mx-md-3">
+                    <i class="fas fa-comment cl-blue-2"></i>
+                    <p class="cl-red-1">7 Bình luận</p>
+                  </div>
+                </div>
+
+                <button type="button" class="btn reply-cmt__btn">Trả lời</button>
+              </div>
+            </div>
+
+            <!-- reply -->
+            <div class="card-body card-body--4 ps-1 ps-md-3">
+              <div class="comment-reply ps-0 ps-md-3">
+                <!-- Single reply -->
+                <div class="avatar_group align-items-start">
+                  <div class="avatar avatar__other-container">
+                    <img class="img_avatar_profile"
+                      src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                  </div>
+
+                  <div class="comment_reply_group w-100 ms-0 ms-md-3">
+                    <div class="infor_group d-flex flex-column flex-sm-row align-items-start align-items-md-center ms-2">
+                      <p class="mb-1 font-size-16 font-weight-600 cl-black">Vương Hoàng Thu Trúc</p>
+
+                      <div class="time_group d-flex align-items-center mx-0 mx-sm-3">
+                        <i class="fal fa-clock"></i>
+                        <p class="mx-2 mb-0">9 tháng trước</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group mt-1 ms-1">
+                      <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Bạn đang nghĩ gì thế?">Mình cũng đang quan tâm giống bạn</textarea>
+                    </div>
+
+                    <div class="group_btn mt-1">
+                      <div class="media_btn_group ps-2 ps-md-0 d-flex flex-column flex-md-row justify-content-start justify-content-md-between">
+                        <div class="media_btn">
+                          <i class="fas fa-heart cl-blue-2"></i>
+                          <p class="cl-red-1">7 Yêu thích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single reply -->
+
+                <!-- Single reply -->
+                <div class="avatar_group align-items-start mt-3">
+                  <div class="avatar avatar__other-container">
+                    <img class="img_avatar_profile"
+                      src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                  </div>
+
+                  <div class="comment_reply_group w-100 ms-0 ms-md-3 ">
+                    <div class="infor_group d-flex flex-column flex-sm-row align-items-start align-items-md-center ms-2">
+                      <p class="mb-1 font-size-16 font-weight-600 cl-black">Vương Hoàng Thu Trúc</p>
+
+                      <div class="time_group d-flex align-items-center mx-0 mx-sm-3">
+                        <i class="fal fa-clock"></i>
+                        <p class="mx-2 mb-0">9 tháng trước</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group mt-1 ms-1">
+                      <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Bạn đang nghĩ gì thế?">Mình nghĩ nên tạo một database dictionary để dễ dàng linh hoạt</textarea>
+                    </div>
+
+                    <div class="group_btn mt-1">
+                      <div class="media_btn_group ps-2 ps-md-0 d-flex flex-column flex-md-row justify-content-start justify-content-md-between">
+                        <div class="media_btn">
+                          <i class="fas fa-heart cl-blue-2"></i>
+                          <p class="cl-red-1">7 Yêu thích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single reply -->
+
+                <!-- Single reply -->
+                <div class="avatar_group align-items-start mt-3">
+                  <div class="avatar avatar__other-container">
+                    <img class="img_avatar_profile"
+                      src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                  </div>
+
+                  <div class="comment_reply_group w-100 ms-0 ms-md-3">
+                    <div class="infor_group d-flex flex-column flex-sm-row align-items-start align-items-md-center ms-2">
+                      <p class="mb-1 font-size-16 font-weight-600 cl-black">Vương Hoàng Thu Trúc</p>
+
+                      <div class="time_group d-flex align-items-center mx-0 mx-sm-3">
+                        <i class="fal fa-clock"></i>
+                        <p class="mx-2 mb-0">9 tháng trước</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group mt-1 ms-1">
+                      <textarea class="form-control bg-textarea-grey" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Bạn đang nghĩ gì thế?">Theo ý kiến cá nhân mình sử dụng dictionary có sẵn của Oracle để quản lý thông tin về bảng vì tiết kiệm dung lượng hơn, và tiện lợi hơn</textarea>
+                    </div>
+
+                    <div class="group_btn mt-1">
+                      <div class="media_btn_group ps-2 ps-md-0 d-flex flex-column flex-md-row justify-content-start justify-content-md-between">
+                        <div class="media_btn">
+                          <i class="fas fa-heart cl-blue-2"></i>
+                          <p class="cl-red-1">7 Yêu thích</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single reply end-->
+
+              </div>
+            </div>
+            <!-- reply end-->
+
+          </div>
+          <!-- Comment Reply end -->
+
+          <div class="w-100 text-center mt-2 mt-sm-3 mt-md-4 mt-lg-5">
+            <button type="button" class="btn btn-danger btn_viewmore">Xem thêm</button>
+          </div>
+        </div>
+
+        <div class="mt-4 mt-lg-0 col-12 col-lg-3">
+          <div class="card border-radius-6">
+            <div class="card-body">
+              <div class="text-title mb-3">
+                <p class="font-size-20 font-weight-700 cl-black mb-0">Tìm kiếm từ khóa</p>
+              </div>
+
+              <input class="input_type kw-search" type="text" name="fname" placeholder="Chủ đề hoặc keyword">
+            </div>
+          </div>
+
+          <div class="card border-radius-6 mt-2 mt-md-4">
+            <div class="card-body kw-container">
+              <div class="text-title mb-3">
+                <p class="font-size-20 font-weight-700 cl-red-2 mb-0">Từ khóa phổ biến</p>
+              </div>
+
+              <p class="font-weight-600">BI Business Intelligence</p>
+              <p class="font-weight-600">Cài đặt SQL Server</p>
+              <p class="font-weight-600">Classification Model</p>
+              <p class="font-weight-600">Data Warehouse</p>
+              <p class="font-weight-600">SQL Server & Internet</p>
+              <p class="font-weight-600">Khai phá dữ liệu</p>
+            </div>
+          </div>
+
+          <div class="card border-radius-6 mt-2 mt-md-4">
+            <div class="card-body popular-member">
+              <div class="text-title mb-3">
+                <p class="font-size-20 font-weight-700 cl-black mb-0">Thành viên tích cực</p>
+              </div>
+
+              <div class="avatar_group">
+                <div class="w-h-48 avatar">
+                  <img class="w-h-48 img_avatar_profile"
+                    src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                </div>
+
+                <div class="infor_group ms-2">
+                  <p class="mb-1 cl-blue-3 font-size-16 font-weight-600">Vương Hoàng Thu Trúc</p>
+
+                  <p class="mb-0 font-size-12">Tham gia 3 tháng trước</p>
+                </div>
+              </div>
+
+              <div class="avatar_group mt-3">
+                <div class="w-h-48 avatar">
+                  <img class="w-h-48 img_avatar_profile"
+                    src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                </div>
+
+                <div class="infor_group ms-2">
+                  <p class="mb-1 cl-blue-3 font-size-16 font-weight-600">Hoàng Thúy Sương</p>
+
+                  <p class="mb-0 font-size-12">Tham gia 7 tháng trước</p>
+                </div>
+              </div>
+
+              <div class="avatar_group mt-3">
+                <div class="w-h-48 avatar">
+                  <img class="w-h-48 img_avatar_profile"
+                    src="https://file.tinnhac.com/resize/600x-/2019/08/26/20190826103657-4954.jpg" alt="">
+                </div>
+
+                <div class="infor_group ms-2">
+                  <p class="mb-1 cl-blue-3 font-size-16 font-weight-600">Vương Hoàng Linh</p>
+
+                  <p class="mb-0 font-size-12">Tham gia 1 tháng trước</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!--.subscribe-->
+    <div id="subscribe"></div>
+  </main>
+  <!-- End Main -->
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+  <!-- End Footer -->
+    
+  <script>
+    $('#header-user').load("./component/header-user.html"); 
+    $('#subscribe').load("./component/subscribe.html"); 
+    $('#footer').load("./component/footer.html");
+   $('#fb-root').load("./component/chat.html");
+  </script>
+</body>
+
+</html>

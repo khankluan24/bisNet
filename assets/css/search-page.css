@@ -1,0 +1,46 @@
+body {
+    background: #eee
+}
+
+.ibox-content {
+    background-color: #fff;
+    color: inherit;
+    padding: 15px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0
+}
+
+.search-result .search-link {
+    color: #006621
+}
+
+.search-result p {
+    font-size: 12px;
+    margin-top: 5px
+}
+
+.hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    margin: 20px 0
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 100
+}
+
+.search-result h3,  .search-result h3 a{
+    color: #000;
+    margin-bottom: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.search-result h3:hover, .search-result h3 a:hover {
+    text-decoration: underline;
+}

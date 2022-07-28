@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khóa học</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+        integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+        integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/course.css" />
+    <link rel="stylesheet" href="../assets/css/utils.css" />
+    <link rel="stylesheet" href="../assets/css/post-visitor.css" />
+    <style></style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header-user"></header>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    <div class="container mt-5">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-12 col-md-8 col-lg-9 sidebar sidebar-left">
+                <header class="course-header">
+                    <h1 class="course-header__title" id="titleTutorial">
+                        Digital Marketing Master Course : 31 Courses in 1
+                    </h1>
+                </header>
+                <!--.article-header-->
+                <div class="course-body">
+                    <div class="course-img-container">
+                        <img id="imageTutorial" src="./assets/img/Image.png" alt="Course image" class="course-img" />
+                    </div>
+                    <div class="course-info">
+                        <ul class="nav nav-tabs course-info__tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#" class="header__search">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="overview-tab" data-bs-toggle="tab"
+                                    data-bs-target="#overview" type="button" role="tab" aria-controls="overview"
+                                    aria-selected="true">
+                                    Overview
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                    type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                    File đính kèm
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content course-tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                aria-labelledby="overview-tab">
+                                <h3 class="heading">Nội dung bài học</h3>
+                                <div class="container px-0">
+                                    <div class="" id="des">
+                                        Digital Marketing Course : Instagram marketing, Facebook,
+                                        SEO, Google ads, Youtube, Email & Mailchimp, Wordpress &
+                                        ...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                <div id="listPdf">
+                                    <a>
+                                        link here
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--.course-body-->
+            </div>
+            <!--.sidebar-left-->
+            <div class="col-12 col-md-4 col-lg-3 sidebar sidebar-right">
+                <div class="accordion course-route" id="accordionExample">
+                    <div class="accordion-item course-route__item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <p class="heading">Video tutorial</p>
+                            </button>
+                        </h2>
+
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body course-route__item-body" id="VideoCourse">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--.sidebar-right-->
+        </div>
+    </div>
+
+    <!--.subscribe-->
+    <div id="subscribe"></div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+    <script src="Js/GetUserDetail.js"></script>
+    <script>
+        $('#header-user').load("../component/header-user.html");
+        $("#subscribe").load("../component/subscribe.html");
+        $("#favourite-course").load("../component/favourite-course.html");
+        $("#category").load("../component/category.html");
+        $("#footer").load("../component/footer.html");
+        $('#fb-root').load("../component/chat.html");
+    </script>
+
+    <script src="../Js/GetTutorialResource.js"></script>
+</body>
+
+</html>

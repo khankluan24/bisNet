@@ -1,0 +1,127 @@
+div.course-title__input {
+    align-items: center;
+    background-color: #FAEBEC;
+    height: 62px;
+    padding: 6px 12px;
+    border: 1px solid #F1F1F1;
+}
+div.course-title__input:focus-within,
+div.course-price__container:focus-within {
+    border-color: #C20000;
+    box-shadow: 0 0 0 0.25rem rgb(194 0 0 / 25%);
+    outline: none;
+}
+input::placeholder {
+    color: var(--primary-color);
+}
+.course-title__input input:focus,
+.course-price:focus {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+}
+.course-criteria__container > div {
+    flex-basis: 32%;
+}
+.course-criteria__container select,
+.course-price__container {
+    height: 56px;
+}
+.course-criteria__container select,
+.course-criteria__container input,
+.course-price__container {
+    border: 1px solid #E2E9F3;
+}
+.course-criteria__container select,
+.course-criteria__container option {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.course-description__container > div {
+    border: 1px solid #42C5E9;
+    padding: 6px 12px;
+}
+.course-description__container > div > li {
+    color: #333333;
+}
+.video-thumbnail__container {
+    padding: 16px 24px 24px;
+    background-color: #fff;
+}
+.video-thumbnail-upload__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 1px solid #CBCBCB;
+    position: relative;
+    cursor: pointer;
+}
+.video-thumbnail-upload__container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.video-thumbnail-upload__notify {
+    background-color: #FFF0F0;
+    margin-top: 24px;
+    padding-bottom: 14px ;
+    padding-top: 14px;
+}
+.btn-group__upload .btn:nth-child(1) {
+    flex-grow: 0;
+    flex-basis: 24%;
+}
+.btn-group__upload .btn:nth-child(2) {
+    flex-grow: 0;
+    flex-basis: 74%;
+}
+.course-upload--detail__header button{
+    border: 1.5px solid #333333;
+    transform: scale(0.7);
+}
+.course-upload--detail hr {
+    opacity: 1;
+    background-color: #CBD7E8;
+}
+.course-upload--detail input[type="text"]::placeholder {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 14px !important;
+   
+    color: #333333 !important;
+}
+
+.course-upload--detail input,
+.course-upload--detail textarea {
+    padding: 6px 12px 28px;
+}
+.course-upload--detail__body .content textarea {
+    height: 324px;
+}
+.close-modal {
+    display: none;
+    transition: all linear 0.3s;
+}
+/* X-Small devices (portrait phones, less than 576px) */
+ @media only screen and (max-width: 575px) {
+    .btn-group__upload button[type="submit"] {
+        margin-bottom: 1.5rem;
+        padding: 1rem 0.5rem
+    }
+    .btn-group__upload button[onclick="backtoIndex()"] {
+        padding: 1rem 0.5rem
+    }
+ } 
+/* Small devices (landscape phones, 576px and up) */
+ @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .btn-group__upload button[type="submit"] {
+        margin-bottom: 1.5rem;
+        padding: 1rem 0.5rem
+    }
+    .btn-group__upload button[onclick="backtoIndex()"] {
+        padding: 1rem 0.5rem
+    }
+ } 

@@ -1,0 +1,200 @@
+.border-radius-6 {
+    border-radius: 6px !important;
+}
+
+.border-radius-8 {
+    border-radius: 8px !important;
+}
+
+.border-radius-10 {
+    border-radius: 10px !important;
+}
+
+.border-radius-12 {
+    border-radius: 12px !important;
+}
+
+.border-radius-16 {
+    border-radius: 16px !important;
+}
+
+.border-radius-circle {
+    border-radius: 50% !important;
+}
+
+.border-red-1 {
+    border: 1px solid #D32F2F !important;
+}
+
+.box-shadow-grey {
+    box-shadow: 4px 4px 20px rgba(73, 83, 104, 0.15) !important;
+}
+
+.font-size-12 {
+    font-size: 12px !important;
+}
+
+.font-size-14 {
+    font-size: 14px !important;
+}
+
+.font-size-16 {
+    font-size: 16px !important;
+}
+
+.font-size-18 {
+    font-size: 18px !important;
+}
+
+.font-size-20 {
+    font-size: 20px !important;
+}
+
+.font-size-22 {
+    font-size: 22px !important;
+}
+
+.font-size-24 {
+    font-size: 24px !important;
+}
+
+.font-weight-400 {
+    font-weight: 400 !important;
+}
+
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+
+.font-weight-600 {
+    font-weight: 600 !important;
+}
+
+.font-weight-700 {
+    font-weight: 700 !important;
+}
+
+.ff-1 {
+    font-family: var(--font) !important;
+}
+
+.ff-2 {
+    font-family: 'Inter' !important;
+}
+
+.ff-3 {
+    font-family: 'DM Sans' !important;
+}
+
+.cl-dark-1 {
+    color: var(--heading-color) !important;
+}
+
+.cl-dark-2 {
+    color: var(--text-color) !important;
+}
+
+.cl-black {
+    color: #333333 !important;
+}
+
+.cl-blue-1 {
+    color: #0266C0 !important;
+}
+
+.cl-blue-2 {
+    color: #0d6efd !important;
+}
+
+.cl-blue-3 {
+    color: #00B2E3 !important;
+}
+
+.cl-yellow-1 {
+    color: #FFCB12 !important;
+}
+
+.cl-grey-1 {
+    color: #8A8C8E !important;
+}
+
+.cl-red-1 {
+    color: #F44336 !important;
+}
+
+.cl-red-2 {
+    color: #D32F2F !important;
+}
+
+.cl-red-3 {
+    color: var(--button-color) !important;
+}
+
+.cl-white {
+    color: white !important;
+}
+
+.cl-green {
+    color: #1CCE66 !important;
+}
+
+.bg-red-1 {
+    background-color: #F44336 !important;
+}
+
+.bg-btn-color {
+    background-color: var(--button-color) !important;
+}
+
+.bg-yellow-1 {
+    background-color: #FFCB12 !important;
+}
+
+.bg-grey-1 {
+    background-color: #F8F9FB !important;
+}
+
+.bg-textarea-grey {
+    background: #F8F9FB !important;
+    border: 1px solid #9AA8BD !important;
+}
+
+.bg-badge-1 {
+    border: 1px solid #0266C0 !important;
+}
+
+.w-fitcontent {
+    width: fit-content !important;
+}
+
+.px-32 {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+
+.mt-32 {
+    margin-top: 32px !important; 
+}
+
+.mb-32 {
+    margin-bottom: 32px !important;
+}
+
+.ms-10 {
+    margin-left: 10px !important;
+}
+
+.me-10 {
+    margin-right: 10px !important;
+}
+
+.me-24 {
+    margin-right: 24px !important;
+}
+
+.me-32 {
+    margin-right: 32px !important; 
+}
+.lh-24 {
+    line-height: 24px;
+}

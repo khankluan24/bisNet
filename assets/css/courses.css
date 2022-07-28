@@ -1,0 +1,94 @@
+.courses .card-media {
+    width: fit-content;
+}
+
+.courses .btn_radio {
+    width: fit-content;
+}
+
+.courses .img-course {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.courses .img_course {
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.courses .p-star {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+}
+.course-filter--shown {
+    padding: 1rem;
+}
+/* X-Small devices (portrait phones, less than 576px) */ 
+@media only screen and (max-width: 575px) {
+    .courses .card-media:nth-child(-n+2) {
+        margin-bottom: 1rem;
+    }
+    div.favourite-course-header {
+        margin-bottom: 0.5rem;
+    }
+    .course-filter__price {
+        margin-bottom: 0;
+    }
+    .course-time-video {
+        margin-bottom: 1rem;
+    }
+} 
+/* Small devices (landscape phones, 576px and up) */ 
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .courses .card-media:nth-child(-n+2) {
+        margin-bottom: 1rem;
+    }
+    div.favourite-course-header {
+        margin-bottom: 0.5rem;
+    }
+    .course-filter__price {
+        margin-bottom: 0;
+    }
+    .course-time-video {
+        margin-bottom: 1rem;
+    }
+} 
+/* Medium devices (tablets, 768px and up) */ 
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    div.favourite-course-header {
+        margin-bottom: 0.5rem;
+    }
+    .course-filter__price {
+        margin-bottom: 0;
+    }
+    .course-time-video {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+ @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .course-filter__price {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        float: right;
+    }
+    .sort > div:first-child {
+        flex-flow: column !important;
+        justify-content: center;
+    }
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */ @media only screen and (min-width: 1200px) and (max-width: 1399px){
+    .course-filter__price {
+        float: right;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */ @media only screen and (min-width: 1400px){
+    .course-filter__price {
+        margin-bottom: 0;
+        float: right;
+    }
+}

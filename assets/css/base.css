@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@500;600&display=swap');
+:root {
+    --text-color:  #1E232A;
+    --heading-color: #3D4756;
+    --description-color: #474D57;
+    --primary-color: #D32F2F;
+    --secondary-color: #E82C4A;
+    --button-color: #C20000;
+    --star-gold-color: #FFCB12;
+    --light-yellow: #FFCA12;
+    --shopping-cart-color: #1CCE65;
+    --border-color: linear-gradient(180deg, rgba(228,47,54,1) 0%, rgba(254,148,159,1) 93%);
+    --font: 'Montserrat', sans-serif;
+}
+
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text-color);
+    background-color: #F9F9FB;
+
+}
+
+main {
+    background-color: #F9F9FB;
+}
+
+
+.btn {
+    height: 42px;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    font-weight: 600;
+    border-radius: .3rem !important;
+}
+
+.btn:hover {
+    background-color: var(--bs-white) !important;
+    color: var(--primary-color);
+    border-color: var(--secondary-color) !important;
+}
+.btn:focus {
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+}
+input:focus, .form-control:focus, button:focus, select:focus,
+textarea:focus {
+    border-color: #C20000 !important;
+    box-shadow: 0 0 0 0.25rem rgb(194 0 0 / 25%) !important;
+    outline: none !important;
+}
+
+.course-tag {
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 8px;
+
+    border: 1px solid;
+    border-radius: 6px;
+}
