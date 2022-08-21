@@ -1,4 +1,4 @@
-import classNames from 'className/bind'
+import classNames from 'classnames/bind'
 import styles from './Subscribe.module.scss'
 
 const cx = classNames.bind(styles)
@@ -24,7 +24,7 @@ function Subscribe() {
         </div>
       </div> */}
 
-      
+
     </section>
   );
 }

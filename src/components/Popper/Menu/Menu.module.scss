@@ -1,0 +1,22 @@
+.menu-list {
+  min-width: 214px;
+  .menu-item {
+    border-color: transparent;
+    justify-content: space-between;
+    padding: 12px 24px;
+    &:hover {
+      background-color: #e9ecef;
+      transition: 0.2s;
+    }
+    &:nth-child(2) {
+      border-color: #E7EAEA transparent #E7EAEA transparent
+    }
+    &>span:not([class^="icon"]) {
+      font-size: 1.6rem;
+    }
+    .icon {
+      font-size: 1.2rem;
+    }
+
+  }
+}

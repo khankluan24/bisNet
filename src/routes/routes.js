@@ -9,7 +9,8 @@ import Profile from '~/pages/Profile'
 import TeacherForm from '~/pages/TeacherForm'
 import UploadCourse from '~/pages/UploadCourse'
 import ManageCourse from '~/pages/ManageCourse'
-
+import Articles from '~/pages/Articles'
+import Post from '~/pages/Post'
 
 const publicRoutes = [
     {
@@ -36,7 +37,12 @@ const publicRoutes = [
     {
         path: config.routes.teacherForm, component: TeacherForm
     },
-    
+    {
+        path: config.routes.articles, component: Articles
+    },
+    {
+        path: config.routes.post, component: Post
+    }
 ]
 
 const privateRoutes = [
