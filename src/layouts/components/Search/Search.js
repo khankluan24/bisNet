@@ -14,28 +14,27 @@ function Search({ children }) {
   const [searchValue, setSearchValue] = useState('');
   const [searchResult, setSearchResult] = useState([]);
 
-
   const inputRef = useRef('');
   const searchRef = useRef('');
-  const courses = searchResult.courses
-  const posts = searchResult.posts
-  console.log(searchResult)
+  const courses = searchResult.courses;
+  const posts = searchResult.posts;
+  // console.log(searchResult)
   useEffect(() => {
-    const test = async() => {
+    const test = async () => {
+      
       try {
-        let response = await fetch(`https://api-gateway.fullstack.edu.vn/api/search?q=css.}`)
-        let data = await response.json()
-        setSearchResult(data.data)
-        return data.data
+        let response = await fetch(`https://api-gateway.fullstack.edu.vn/api/search?q=css}`);
+        let data = await response.json();
+
+        console.log(data);
+        setSearchResult(data.data);
+        return data.data;
       } catch (error) {
-        throw new Error('Lỗi rồi')
+        throw new Error('Lỗi rồi');
       }
-    }
-    test()
-
-  },[searchValue])
- 
-
+    };
+    test();
+  }, [searchValue]);
 
   const showSearchBar = () => {
     searchRef.current.classList.toggle(cx('transform'));
@@ -64,14 +63,18 @@ function Search({ children }) {
               <Link to={config.routes.course}>Xem thêm</Link>
             </div>
             {/* Chỗ này bỏ search item cho khóa học */}
-            {courses?.map(course => <SearchItem key={course.id} course={course} />)}
-            
+            {courses?.map((course) => (
+              <SearchItem key={course.id} course={course} />
+            ))}
+
             <div className={cx('search-heading')}>
               <h5>Bài viết</h5>
               <Link to={config.routes.articles}>Xem thêm</Link>
             </div>
             {/* Chỗ này bỏ search item cho bài viết */}
-            {posts?.map(post => <SearchItem key={post.id} post={post} />)}
+            {posts?.map((post) => (
+              <SearchItem key={post.id} post={post} />
+            ))}
             {/* <SearchItem />
             <SearchItem /> */}
           </div>
