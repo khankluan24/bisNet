@@ -11,6 +11,7 @@ import UploadCourse from '~/pages/UploadCourse'
 import ManageCourse from '~/pages/ManageCourse'
 import Articles from '~/pages/Articles'
 import Post from '~/pages/Post'
+import Search from '~/pages/Search'
 
 const publicRoutes = [
     {
@@ -42,6 +43,9 @@ const publicRoutes = [
     },
     {
         path: config.routes.post, component: Post
+    },
+    {
+        path: config.routes.search, component: Search
     }
 ]
 

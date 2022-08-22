@@ -12,7 +12,6 @@ const cx = classNames.bind(styles);
 function Menu({ items = [], icon,children }) {
   return (
     <HeadlessTippy
-      // visible ={display}
       offset={[50,20]}
       interactive
       render={(attrs) => (

@@ -59,14 +59,19 @@
     align-items: center;
     display: flex;
     padding: 6px 0 0;
-    & > svg {
+    &__icon {
       color: #0000008a;
-    transform: scale(0.9);
-    margin-right: 8px;
+      transform: scale(0.9);
+    }
+    .loading-btn {
+      // transform: rotate(45deg);
+
+      animation: loadingBtn 2s linear infinite;
     }
     & > span {
       color: rgba(0, 0, 0, 0.6);
-    font-size: 1.4rem;
+      font-size: 1.4rem;
+      margin-left: 8px;
     }
   }
   .search-heading {
@@ -74,8 +79,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
-    padding: 18px 0 12px;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 18px 0 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     & > h5 {
       text-transform: uppercase;
       font-weight: 600;
@@ -85,5 +90,13 @@
       font-size: 1.4rem;
       color: var(--light-color);
     }
+  }
+}
+@keyframes loadingBtn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
