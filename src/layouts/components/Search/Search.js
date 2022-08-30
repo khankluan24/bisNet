@@ -3,7 +3,7 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faXmark, faRotate } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import SearchItem from '~/components/SearchItem';
 import * as searchService from '~/Services/searchService';
@@ -25,6 +25,13 @@ function Search({ children }) {
   // Khai báo getApi khóa học và post
   const courses = searchResult.courses;
   const posts = searchResult.posts;
+
+  const location = useLocation()
+
+  useEffect(() => {
+    setSearchValue('')
+    setVisible(false)
+  },[location.pathname])
 
   useEffect(() => {
     if (!searchDebounce.trim()) {
