@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './custom.scss';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import App from '~/App';
 import GlobalStyles from '~/components/GlobalStyles/GlobalStyles';
 import reportWebVitals from './reportWebVitals';

@@ -12,6 +12,9 @@
     border-color: rgba(22, 24, 35, 0.2);
     & .search__btn {
       border-color: var(--red-color);
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
   input {
