@@ -1,3 +1,4 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
 .header {
   width: 100%;
   display: flex;
@@ -9,52 +10,78 @@
     width: var(--main-layout-header-width);
     display: flex;
     justify-content: space-between;
-    padding: 4px 0;
+    @include breakpoint(lg) {
+      padding: 4px 0;
+    }
+    @include breakpoint() {
+      padding: 4px 12px;
+    }
     align-items: center;
     .brand {
-        display: flex;
-        align-items: center;
-        .logo {
-            margin-right: 32px;
-          img {
-            width: 132px;
-            height: 62px;
-          }
-        }
-        .nav-item {
-          .nav-link {
-            display: flex;
-            align-items: center;
-            span {
-              font-weight: 500;
-              font-size: 1.8rem;
-              margin-right: 10px;
-            }
-            .down-icon {
-              color: var(--secondary-color);
-              height: 15px;
-              width: 22px;
-              transform: scale(1.5);
-            }
-
-          }
-        }
-
-    }
-    .actions {
       display: flex;
       align-items: center;
+      .logo {
+        margin-right: 32px;
+        img {
+          width: 132px;
+          height: 62px;
+        }
+      }
+      .nav-item {
+        @include breakpoint {
+          display: none;
+        }
+        @include breakpoint(lg) {
+          display: block;
+        }
+        .nav-link {
+          display: flex;
+          align-items: center;
+          span {
+            font-weight: 500;
+            font-size: 1.8rem;
+            margin-right: 10px;
+          }
+          .down-icon {
+            color: var(--secondary-color);
+            height: 15px;
+            width: 22px;
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+    .navbar-toggler {
+      @include breakpoint(md) {
+        display: none;
+      }
+      color: rgba(0,0,0,.55);
+      padding: 2px 16px;
+      font-size: 2.4rem;
+      background-color: transparent;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 0.25rem;
+      transition: box-shadow .15s ease-in-out;
+    }
+    .actions {
+      @include breakpoint(s) {
+        // display: none;
+      }
+      @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+      }
       .nav-wrapper {
-        & >a {
+        & > a {
           font-size: 1.8rem;
           font-weight: 500;
           &:nth-child(2) {
-            margin: 0 20px 0 24px
+            margin: 0 20px 0 24px;
           }
           &:hover {
             text-decoration: var(--red-color) underline 2px;
             text-underline-offset: 6px;
-            transition: .25s;
+            transition: 0.25s;
           }
         }
       }
@@ -62,7 +89,7 @@
         background-color: transparent;
         font-size: 2.2rem;
         margin: 0 36px;
-        & >svg {
+        & > svg {
           color: #747597;
         }
       }
