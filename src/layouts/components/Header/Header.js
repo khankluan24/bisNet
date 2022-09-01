@@ -1,11 +1,12 @@
 // Libraries
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 // Path
 import config from '~/config';
+import Popper from '~/components/Popper';
 import Search from '~/layouts/components/Search';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -14,6 +15,11 @@ import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 const cx = classNames.bind(styles);
 function Header() {
+  const collapseRef = useRef('');
+
+  const showNavCollapse = () => {
+    collapseRef.current.classList.toggle(cx('show'));
+  };
   const menuDropdown = [
     {
       name: 'BA',
@@ -30,7 +36,7 @@ function Header() {
   ];
   return (
     <header className={cx('header')}>
-      <nav className={cx('navbar','navbar-expand-lg navbar-light bg-light')}>
+      <nav className={cx('navbar', 'navbar navbar-light')}>
         {/* Logo + menu item */}
         <div className={cx('brand')}>
           {/* Logo */}
@@ -38,7 +44,7 @@ function Header() {
             <img alt="logo" src={images.logo} />
           </Link>
 
-          <Menu items={menuDropdown} icon={faChevronRight}>
+          <Menu offset={[0, 10]} items={menuDropdown} icon={faChevronRight}>
             <div className={cx('nav-item')}>
               <Link to={config.routes.home} className={cx('nav-link')}>
                 <span className={cx('title')}>Khóa học</span>
@@ -48,65 +54,60 @@ function Header() {
           </Menu>
         </div>
         {/* Menu Icon */}
-        <button
-          className={cx('navbar-toggler')}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
+        <button className={cx('navbar-toggler', 'navbar-toggler')} onClick={showNavCollapse}>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to={config.routes.home}
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
+        
+        <div className={cx('navbar-collapse', 'collapse navbar-collapse')} ref={collapseRef}>
+          <Popper className={cx('navbar-list')}>
+            <div className={cx('navbar-nav', 'navbar-nav me-auto mb-2 mb-lg-0')}>
+              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.home}>
+                Trang chủ
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link className="dropdown-item" to={config.routes.home}>
-                    Action
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={config.routes.home}>
-                    Another action
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link className="dropdown-item" to={config.routes.home}>
-                    Something else here
-                  </Link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.forum}>
+                Diễn đàn
+              </Link>
+              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.login}>
+                Đăng nhập
+              </Link>
+              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.register}>
+                Đăng ký
+              </Link>
+              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.teacherForm}>
+                Cộng tác
+              </Link>
+              <Search classes={cx('px-4 mb-3')}>
+                <button className={cx('search')}>
+                  <FontAwesomeIcon icon={faSearch} />
+                </button>
+              </Search>
+
+              {/* Menu dropdown */}
+              <Menu
+                offset={[0, 10]}
+                items={menuDropdown}
+                childrenClass={cx('dropdown-item')}
+                classes={cx('dropdown-menu')}
+              >
+                <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.home}>
+                  Chuyên đề
+                </Link>
+              </Menu>
+            </div>
+          </Popper>
         </div>
         {/* Actions */}
         <div className={cx('actions')}>
           <div className={cx('nav-wrapper')}>
-            <Link to={config.routes.home}>Trang chủ</Link>
-            <Link to={config.routes.forum}>Diễn đàn</Link>
-            <Link to={config.routes.teacherForm}>Cộng tác</Link>
+            <Link className={cx('nav__item')} to={config.routes.home}>
+              Trang chủ
+            </Link>
+            <Link className={cx('nav__item')} to={config.routes.forum}>
+              Diễn đàn
+            </Link>
+            <Link className={cx('nav__item')} to={config.routes.teacherForm}>
+              Cộng tác
+            </Link>
           </div>
 
           <Search>

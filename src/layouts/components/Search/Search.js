@@ -12,7 +12,7 @@ import config from '~/config';
 import styles from './Search.module.scss';
 import Popper from '~/components/Popper';
 const cx = classNames.bind(styles);
-function Search({ children }) {
+function Search({ children,classes }) {
   const [searchValue, setSearchValue] = useState('');
   const [visible, setVisible] = useState(true);
   const [searchResult, setSearchResult] = useState([]);
@@ -95,7 +95,7 @@ function Search({ children }) {
         </Popper>
       )}
     >
-      <div className={cx('search')} ref={searchRef}>
+      <div className={cx('search',classes)} ref={searchRef}>
         <input
           value={searchValue}
           ref={inputRef}
