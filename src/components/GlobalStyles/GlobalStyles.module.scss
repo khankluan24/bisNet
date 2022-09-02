@@ -44,10 +44,6 @@ input,
   outline: none;
   border: none;
   font-family: var(--font-secondary);
-  // &:focus {
-  //   box-shadow: 0 0 0 4px rgb(194 0 0 / 25%) ;
-  //   border-color: #C20000 !important
-  // }
 }
 
 button:hover {
@@ -89,8 +85,8 @@ a {
       @content;
     }
   }
-   // 375px
-   @else {
+  // 375px
+  @else {
     @media (min-width: 23.438em) {
       @content;
     }

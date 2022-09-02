@@ -1,30 +1,23 @@
-import classNames from 'classnames/bind'
-import styles from './Subscribe.module.scss'
+import classNames from 'classnames/bind';
 
-const cx = classNames.bind(styles)
+import Button from '~/components/Button';
+import styles from './Subscribe.module.scss';
+
+const cx = classNames.bind(styles);
 function Subscribe() {
   return (
-    <section className={cx("wrapper")}>
-      {/* <div className="container-fluid">
-        <div className="row flex-column align-items-center">
-          <h3 className="subscribe__title">Đừng bỏ lỡ nhiều thông tin mới nhất từ BIS.NET Đăng ký ngay</h3>
-          <form className="input-group subscribe-form mb-3">
-            <input
-              type="text"
-              className="form-control subscribe-form__input"
-              placeholder="Nhập email của bạn"
-              aria-describedby="button-addon2"
-            />
-            <a href="./register-main.html">
-              <button className="btn subscribe-form__submit" type="button" id="button-addon2">
-                Submit
-              </button>
-            </a>
+    <section className={cx('wrapper')}>
+      <div className={cx('container-fluid')}>
+        <div className={cx('row flex-column align-items-center')}>
+          <h3 className={cx('title')}>Đừng bỏ lỡ nhiều thông tin mới nhất từ BIS.NET Đăng ký ngay</h3>
+          <form className={cx('search-box', 'input-group mb-4')}>
+            <input type="text" placeholder="Nhập email của bạn" />
+            <Button outline large className={cx('search')}>
+              Submit
+            </Button>
           </form>
         </div>
-      </div> */}
-
-
+      </div>
     </section>
   );
 }

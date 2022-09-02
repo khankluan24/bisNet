@@ -14,6 +14,7 @@ function Menu({ items = [], icon, children, classes, offset,childrenClass }) {
     <HeadlessTippy
       offset={offset}
       interactive
+      // visible
       placement="bottom-end"
       delay={[100, 500]}
       render={(attrs) => (

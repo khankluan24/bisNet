@@ -7,6 +7,7 @@ import { faChevronDown, faChevronRight, faSearch } from '@fortawesome/free-solid
 // Path
 import config from '~/config';
 import Popper from '~/components/Popper';
+import NavCollapse from '~/components/NavCollapse';
 import Search from '~/layouts/components/Search';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -34,6 +35,50 @@ function Header() {
       path: '/',
     },
   ];
+  const navItems = [
+    {
+      name: 'Trang chủ',
+      path: config.routes.home,
+    },
+    {
+      name: 'Diễn đàn',
+      path: config.routes.forum,
+    },
+    {
+      name: 'Cộng tác',
+      path: config.routes.teacherForm,
+    },
+  ];
+  const collapseMenu = [
+    {
+      name: 'Trang chủ',
+      path: config.routes.home,
+    },
+    {
+      name: 'Diễn đàn',
+      path: config.routes.forum,
+    },
+    {
+      name: 'Đăng nhập',
+      path: config.routes.login,
+    },
+    {
+      name: 'Đăng ký',
+      path: config.routes.register,
+    },
+    {
+      name: 'Cộng tác',
+      path: config.routes.teacherForm,
+    },
+  ];
+  const renderNavItems = () => {
+    const navItem= (navItems.map((navItem, index) => (
+      <Link key={index} className={cx('nav__item')} to={navItem.path}>
+        {navItem.name}
+      </Link>
+    )))
+    return navItem
+  };
   return (
     <header className={cx('header')}>
       <nav className={cx('navbar', 'navbar navbar-light')}>
@@ -43,8 +88,7 @@ function Header() {
           <Link to={config.routes.home} className={cx('logo')}>
             <img alt="logo" src={images.logo} />
           </Link>
-
-          <Menu offset={[0, 10]} items={menuDropdown} icon={faChevronRight}>
+          <Menu offset={[100, 10]} items={menuDropdown} icon={faChevronRight}>
             <div className={cx('nav-item')}>
               <Link to={config.routes.home} className={cx('nav-link')}>
                 <span className={cx('title')}>Khóa học</span>
@@ -57,59 +101,14 @@ function Header() {
         <button className={cx('navbar-toggler', 'navbar-toggler')} onClick={showNavCollapse}>
           <span className="navbar-toggler-icon"></span>
         </button>
-        
-        <div className={cx('navbar-collapse', 'collapse navbar-collapse')} ref={collapseRef}>
-          <Popper className={cx('navbar-list')}>
-            <div className={cx('navbar-nav', 'navbar-nav me-auto mb-2 mb-lg-0')}>
-              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.home}>
-                Trang chủ
-              </Link>
-              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.forum}>
-                Diễn đàn
-              </Link>
-              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.login}>
-                Đăng nhập
-              </Link>
-              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.register}>
-                Đăng ký
-              </Link>
-              <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.teacherForm}>
-                Cộng tác
-              </Link>
-              <Search classes={cx('px-4 mb-3')}>
-                <button className={cx('search')}>
-                  <FontAwesomeIcon icon={faSearch} />
-                </button>
-              </Search>
 
-              {/* Menu dropdown */}
-              <Menu
-                offset={[0, 10]}
-                items={menuDropdown}
-                childrenClass={cx('dropdown-item')}
-                classes={cx('dropdown-menu')}
-              >
-                <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.home}>
-                  Chuyên đề
-                </Link>
-              </Menu>
-            </div>
-          </Popper>
+        <div className={cx('navbar-collapse', 'collapse navbar-collapse')} ref={collapseRef}>
+          <NavCollapse items={collapseMenu} dropDownItems={menuDropdown} />
         </div>
+
         {/* Actions */}
         <div className={cx('actions')}>
-          <div className={cx('nav-wrapper')}>
-            <Link className={cx('nav__item')} to={config.routes.home}>
-              Trang chủ
-            </Link>
-            <Link className={cx('nav__item')} to={config.routes.forum}>
-              Diễn đàn
-            </Link>
-            <Link className={cx('nav__item')} to={config.routes.teacherForm}>
-              Cộng tác
-            </Link>
-          </div>
-
+          <div className={cx('nav-wrapper')}>{renderNavItems()}</div>
           <Search>
             <button className={cx('search')}>
               <FontAwesomeIcon icon={faSearch} />

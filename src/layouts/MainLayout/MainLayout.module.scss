@@ -5,8 +5,9 @@
     align-items: center;
 }
 .container {
-    width: var(--main-layout-header-width);
+    display: flex;
+    flex-flow: column;
     min-height: 1000px;
     margin-top: var(--main-layout-header-height);
-    display: flex
+    width: 100%;
 }
