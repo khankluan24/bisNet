@@ -12,6 +12,7 @@ import ManageCourse from '~/pages/ManageCourse'
 import Articles from '~/pages/Articles'
 import Post from '~/pages/Post'
 import Search from '~/pages/Search'
+import FAQ from '~/pages/FAQ'
 
 const publicRoutes = [
     {
@@ -46,6 +47,9 @@ const publicRoutes = [
     },
     {
         path: config.routes.search, component: Search
+    },
+    {
+        path: config.routes.faq, component: FAQ
     }
 ]
 

@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Button.module.scss';
 const cx = classNames.bind(styles);
 function Button({
-  to = false,
-  href =false,
+  to ,
+  href ,
   onClick,
+  type,
   primary = false,
   outline = false,
   rounded = false,
@@ -39,11 +40,15 @@ function Button({
   else if (href) {
     Comp = 'a'
   }
+  else if (to || href) {
+    type = ''
+  }
   return (
-    <Comp className={classes} to ={to} href={href}>
+    <Comp className={classes} type={type} to ={to} href={href}>
       {leftIcon && <span className={cx('icon--left', 'icon')}>
         <FontAwesomeIcon icon={leftIcon}/>
       </span>}
+
       {<span className={cx('title')}>{children}</span>}
 
       {rightIcon && <span className={cx('icon--right', 'icon')}>

@@ -3,6 +3,7 @@ import styles from './MainLayout.module.scss';
 
 import Header from '~/layouts/components/Header';
 import Subscribe from '~/layouts/components/Subscribe';
+import Footer from '~/layouts/components/Footer'
 const cx = classNames.bind(styles);
 
 
@@ -14,6 +15,7 @@ function MainLayout({ children }) {
         <div className={cx('content')}>{children}</div>
         <Subscribe/>
       </main>
+      <Footer/>
     </div>
   );
 }

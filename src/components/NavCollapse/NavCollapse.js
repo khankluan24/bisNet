@@ -27,10 +27,13 @@ function NavCollapse(props) {
 
           {/* Menu dropdown */}
           <Menu offset={[0, 10]} items={props.dropDownItems} childrenClass={cx('dropdown-item')} classes={cx('dropdown-menu')}>
-            <Link className={cx('nav__item', 'px-4 mb-3')} to={config.routes.home}>
+            {props.hideNavItem? '':(
+
+            <Link className={cx('nav__item', 'd-lg-none px-4 mb-3')} to={config.routes.home}>
               Chuyên đề
               <FontAwesomeIcon icon={faSortDown} className={cx('sort-icon')} />
             </Link>
+            )}
           </Menu>
         </div>
       </Popper>

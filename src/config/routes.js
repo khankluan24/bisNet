@@ -11,6 +11,7 @@ const route = {
     teacherForm:'/teacher-form',
     uploadCourse:'/upload-course',
     manageCourse:'/manage-course',
-    search:'/search'
+    search:'/search',
+    faq:'/faq',
 }
 export default route

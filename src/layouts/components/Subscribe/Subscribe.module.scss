@@ -1,61 +1,64 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
 .wrapper {
   background-color: var(--heading-color);
   margin-top: 4.5rem;
-  padding: 50px 0;
+  @include breakpoint() {
+    padding: 30px 0;
+  }
+  @include breakpoint() {
+    padding: 50px 0;
+  }
   max-height: 800px;
   .title {
-    font-size: 3.2rem;
     font-weight: 700;
 
     text-align: center;
     color: #fff;
     margin-bottom: 46px;
     width: 46%;
-  }
-  .form {
-    width: 26%;
-    height: 64px;
-    .input {
-      background-color: transparent;
-
-      border: 2px solid #ffffff;
-      border-radius: 3rem;
-      
+    @include breakpoint() {
+      width: 100%;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
     }
-    .submit {
-      position: absolute !important;
-      left: 70%;
-      width: 170px;
-      height: 64px;
+    @include breakpoint(sm) {
+      width: 75%;
+      font-size: 3rem;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(lg) {
+      font-size: 3.2rem;
+      width: 40%;
 
-      color: var(--primary-color);
-      background-color: #fff;
-
-      border-radius: 3rem !important;
-      line-height: 0;
-
-      font-size: 24px;
-      font-weight: 600;
-      font-family: 'Poppins', sans-serif;
     }
   }
 }
 
-.search-box {
-  width: 480px;
+.form {
   border: 2px solid #fff;
   position: relative;
   border-radius: 40px;
   overflow: hidden;
   transition: all 0.5s ease;
+  @include breakpoint() {
+    width: 400px;
+  }
+  @include breakpoint(sm) {
+    width: 480px;
+  }
   input {
     background: transparent;
     border: none;
-    padding: 20px;
     color: var(--primary-color);
     width: 70%;
     font-size: 1.6rem;
     font-weight: 600;
+    @include breakpoint() {
+      padding: 16px;
+    }
+    @include breakpoint(sm) {
+      padding: 20px;
+    }
     &:focus {
       border-color: #fff !important;
       border-right-color: transparent !important;
@@ -64,20 +67,61 @@
       box-shadow: none !important;
     }
   }
-  .search {
-    padding: 22px 40px;
+  .submit {
     background-color: #ffff;
     border: none;
     border-radius: 40px !important;
     position: absolute;
     right: 0px;
     top: -1px;
+    @include breakpoint() {
+      padding: 16px;
+      top: 0;
+    }
+    @include breakpoint(sm) {
+      padding: 22px 40px;
+      top: -2px;
+    }
     &:hover {
       cursor: pointer;
       background-color: var(--primary-color);
     }
     .title {
       font-size: 2.4rem;
+      @include breakpoint() {
+        font-size: 1.8rem;
+      }
     }
+  }
+}
+
+.message--error {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: #fbeee9;
+  border: 1px solid rgb(194 0 0 / 40%);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  @include breakpoint() {
+    width: 60%;
+  }
+  @include breakpoint(sm) {
+    width: 40%;
+  }
+  @include breakpoint(md) {
+    width: 30%;
+  }
+  @include breakpoint(lg) {
+    width: 24%;
+  }
+  @include breakpoint(xl) {
+    width: 18%;
+  }
+  &__icon {
+    color: var(--primary-color);
+    margin-right: 8px;
   }
 }

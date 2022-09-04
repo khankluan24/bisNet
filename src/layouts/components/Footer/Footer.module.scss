@@ -1,0 +1,98 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+// Footer
+.wrapper {
+  background-color: #ea1b3c;
+  color: #fff;
+  padding: 24px 20px 80px;
+  justify-content: center;
+  @include breakpoint() {
+    padding: 20px;
+  }
+  @include breakpoint(sm) {
+    padding: 20px 10px 40px;
+  }
+  @include breakpoint(md) {
+    justify-content: space-between;
+  }
+  @include breakpoint(xl) {
+    padding: 24px 20px 80px;
+    justify-content: unset;
+  }
+  .contact {
+    @include breakpoint(sm) {
+      margin-left: 20px;
+      margin-right: 1rem;
+    }
+    @include breakpoint(lg) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .footer-logo {
+      cursor: pointer;
+      color: #fff !important;
+      font: {
+        family: 'Inter', sans-serif;
+        weight: 800;
+        size: 2.4rem;
+      }
+      display: flex;
+      align-items: center;
+      .logo {
+        height: 32px;
+        margin-right: 10px;
+      }
+    }
+    .list {
+      .item {
+        font: {
+          family: 'DM Sans', sans-serif;
+          size: 1.5rem;
+          weight: 500;
+        }
+        color: #fff;
+        line-height: 28px;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.25s;
+          color: var(--text-color);
+        }
+        @include breakpoint(md) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Footer Menu
+.footer-container {
+  & > h3 {
+    @include breakpoint(lg) {
+      font-size: 2.6rem !important;
+    }
+  }
+}
+.social-list {
+  flex-flow: row !important;
+  margin-top: 12px;
+  .footer-item {
+    margin-right: 12px;
+  }
+}
+
+// Footer Item
+.footer-item {
+  font: {
+    family: 'DM Sans', sans-serif;
+    size: 1.5rem;
+    weight: 500;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.25s;
+    color: var(--text-color) !important;
+  }
+  @include breakpoint(md) {
+    font-size: 1.8rem;
+  }
+}

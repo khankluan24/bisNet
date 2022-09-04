@@ -9,7 +9,7 @@ import MenuItem from '~/components/Popper/Menu/MenuItem';
 
 const cx = classNames.bind(styles);
 
-function Menu({ items = [], icon, children, classes, offset,childrenClass }) {
+function Menu({ items , icon, children, classes, offset,childrenClass }) {
   return (
     <HeadlessTippy
       offset={offset}
@@ -19,7 +19,7 @@ function Menu({ items = [], icon, children, classes, offset,childrenClass }) {
       delay={[100, 500]}
       render={(attrs) => (
         <Popper className={cx('menu-list', classes)} tabIndex="-1" {...attrs}>
-          {items.map((item, index) => (
+          {items?.map((item, index) => (
             <MenuItem key={index} className={cx('menu-item',childrenClass)} data={item} icon={icon}></MenuItem>
           ))}
         </Popper>
