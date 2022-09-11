@@ -1,7 +1,15 @@
 import Button from '~/components/Button';
-function MenuItem({ data, icon,className }) {
+function MenuItem({ data, className, titleClass }) {
   return (
-  <Button rightIcon={icon} className={className} to={data.path}>{data.name}</Button>
+    <Button
+      rightIcon={data.rightIcon ? data.rightIcon : ''}
+      leftIcon={data.leftIcon ? data.leftIcon : ''}
+      className={className}
+      titleClass ={titleClass}
+      to={data.path}
+    >
+      {data.name}
+    </Button>
   );
 }
 

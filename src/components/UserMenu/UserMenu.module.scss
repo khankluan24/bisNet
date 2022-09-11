@@ -1,0 +1,41 @@
+@import '../GlobalStyles/GlobalStyles.module.scss';
+// User
+.menu-user {
+  // @include breakpoint(xl) {
+  //     cursor: pointer;
+  // }
+  cursor: pointer;
+  min-width: 150px !important;
+  .user-item {
+    padding: 8px 16px !important;
+    padding-left: 20px !important;
+    justify-content: unset !important;
+    span:not(.title) {
+      margin-right: 8px;
+      line-height: 1;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 1.4rem !important;
+    }
+  }
+}
+.user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .name {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .sort-down__icon {
+    background-color: transparent;
+    padding: 2px 8px 5px;
+  }
+}

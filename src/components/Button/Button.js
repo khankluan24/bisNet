@@ -17,6 +17,7 @@ function Button({
   large = false,
   disabled = false,
   className,
+  titleClass,
   leftIcon,
   rightIcon,
   children,
@@ -49,7 +50,7 @@ function Button({
         <FontAwesomeIcon icon={leftIcon}/>
       </span>}
 
-      {<span className={cx('title')}>{children}</span>}
+      {<span className={cx('title',titleClass)}>{children}</span>}
 
       {rightIcon && <span className={cx('icon--right', 'icon')}>
         <FontAwesomeIcon icon={rightIcon}/>

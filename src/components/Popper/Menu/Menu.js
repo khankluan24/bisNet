@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -9,7 +8,7 @@ import MenuItem from '~/components/Popper/Menu/MenuItem';
 
 const cx = classNames.bind(styles);
 
-function Menu({ items , icon, children, classes, offset,childrenClass }) {
+function Menu({ items , children, menuClass, menuItemClass,offset,titleClass }) {
   return (
     <HeadlessTippy
       offset={offset}
@@ -18,9 +17,9 @@ function Menu({ items , icon, children, classes, offset,childrenClass }) {
       placement="bottom-end"
       delay={[100, 500]}
       render={(attrs) => (
-        <Popper className={cx('menu-list', classes)} tabIndex="-1" {...attrs}>
+        <Popper className={cx('menu-list', menuClass)} tabIndex="-1" {...attrs}>
           {items?.map((item, index) => (
-            <MenuItem key={index} className={cx('menu-item',childrenClass)} data={item} icon={icon}></MenuItem>
+            <MenuItem key={index} className={cx('menu-item',menuItemClass)} titleClass={titleClass} data={item} icon={item.icon}></MenuItem>
           ))}
         </Popper>
       )}

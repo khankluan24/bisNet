@@ -1,0 +1,195 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+
+/* Favourite Course */
+.wrapper {
+  .header {
+    @include breakpoint() {
+      flex-wrap: wrap;
+    }
+    .heading {
+      font-size: 3.2rem;
+      color: var(--text-color);
+    }
+    .more {
+      color: var(--primary-color);
+      &:hover {
+        opacity: 0.5;
+      }
+      .title {
+        font-weight: 500;
+        font-size: 1.8rem;
+
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+      .right-icon {
+      }
+    }
+  }
+}
+.list {
+  position: relative;
+}
+
+// Button controls
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: white;
+  cursor: pointer;
+  &.next {
+    right: -10px;
+  }
+  &.prev {
+    left: -10px;
+  }
+}
+
+// Favourite Course Item
+.item-container {
+  max-width: 400px;
+  @include breakpoint(sm) {
+    max-width: unset;
+  }
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 4px 4px 12px rgb(73 83 104 / 15%);
+  .header {
+    border-radius: 6px;
+    img {
+      width: 100%;
+      height: 165px;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  }
+  .body {
+    .heading {
+      font-size: 2rem;
+      color: var(--text-color);
+      min-height: 48px;
+    }
+    .desc {
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      text-align: justify;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .divider {
+      border-color: var(--secondary-color);
+      border-width: 1.5px;
+      opacity: 1;
+    }
+    .info {
+      .shopping {
+        .symbol {
+          background-color: #d2f5e0;
+          height: 24px;
+
+          border-radius: 45px;
+          text-align: center;
+          margin-right: 0.5rem;
+        }
+        .count {
+          font-size: 1.6rem;
+          font-weight: 500;
+        }
+      }
+      .rating {
+        .number {
+          background-color: #fff5d0;
+          padding: 3.5px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: #ffcb12;
+          width: 24px;
+          height: 25px;
+        }
+        .star-wrapper {
+          width: 75px;
+          .star {
+          }
+        }
+        .count {
+          font-size: 1.6rem;
+          font-weight: 500;
+        }
+      }
+      .teacher-avatar {
+        width: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Detail Popup
+.detail-wrapper {
+  padding: 24px 16px;
+  color: var(--text-color);
+  min-width: 400px;
+  @include breakpoint() {
+    display: none;
+  }
+  @include breakpoint(xl) {
+    display: block;
+  }
+  .header {
+    h3 {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .info {
+      img {
+        width: 32px;
+        border-radius: 50%;
+      }
+      .name {
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .desc {
+    .item {
+      span {
+        font-size: 1.4rem;
+        text-align: justify;
+      }
+      .check-icon {
+      }
+    }
+  }
+  .actions {
+    .add-to-cart {
+      min-width: 286px;
+    }
+    .like {
+      background-color: transparent;
+      border: 1px solid var(--secondary-color);
+      border-radius: 50%;
+      padding: 14px 16px;
+      height: 50px;
+      transition: background-color 0.25s;
+      .heart-icon {
+        transform: scale(1.5);
+        color: var(--secondary-color);
+      }
+      &:hover {
+        background-color: var(--secondary-color);
+        .heart-icon {
+          color: var(--bs-white);
+        }
+      }
+    }
+  }
+}

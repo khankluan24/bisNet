@@ -7,6 +7,7 @@
   padding: 8px 12px;
   border-radius: 4px;
   min-width: 100px;
+  transition:.25s;
   .title {
     font-weight: 600;
     font-size: 1.4rem;
@@ -40,6 +41,11 @@
 .redSolid {
   background-color: var(--secondary-color);
   color: white;
+  &:hover {
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    color:var(--secondary-color)
+  }
 }
 .disabled {
   user-select: none;

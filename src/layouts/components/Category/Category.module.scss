@@ -1,0 +1,55 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+.wrapper {
+  & > div {
+    @include breakpoint() {
+      padding: 0 16px;
+    }
+    @include breakpoint(md) {
+      padding: 0 48px;
+    }
+    @include breakpoint(lg) {
+      padding:  0;
+    }
+    .title {
+      font-size: 3.2rem;
+      color: var(--secondary-color);
+
+      margin-bottom: 40px;
+      @include breakpoint(md) {
+        padding: 0 32px;
+      }
+      @include breakpoint(lg) {
+        padding: 0 110px;
+      }
+    }
+    .body {
+      .item {
+        background-color: var(--bs-white);
+        width: 250px;
+        height: 209px;
+
+        box-shadow: 4px 4px 40px rgba(197, 197, 197, 0.1);
+        padding: 24px;
+
+        border-radius: 6px;
+        border: 1px solid #f5f5f5;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.25s;
+        }
+        .circle {
+          border-radius: 50%;
+          box-shadow: 4px 4px 20px rgba(73, 83, 104, 0.15);
+        }
+        .heading {
+            font-size: 1.8rem;
+        }
+        .more {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

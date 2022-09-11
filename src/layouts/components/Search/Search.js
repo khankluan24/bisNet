@@ -41,7 +41,7 @@ function Search({ children,classes }) {
     // Get API từ F8
     const fetchApi = async () => {
       setLoading(true);
-      const result = await searchService.search(searchDebounce);
+      const result = await searchService.get(searchDebounce);
       setSearchResult(result || []);
       setLoading(false);
     };

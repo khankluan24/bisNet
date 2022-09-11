@@ -2,11 +2,18 @@
 import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronDown,
+  faChevronRight,
+  faSearch,
+  faPen,
+  faArrowRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Path
 import config from '~/config';
-import Popper from '~/components/Popper';
+import UserMenu from '~/components/UserMenu';
+import { Icons as icon } from '~/assets/Icons';
 import NavCollapse from '~/components/NavCollapse';
 import Search from '~/layouts/components/Search';
 import { useViewPort } from '~/hooks';
@@ -24,6 +31,8 @@ function Header() {
   let isLapTop = viewPort >= 992;
   let isDeskTop = viewPort >= 1200;
 
+  let currentUser = false;
+
   const showNavCollapse = () => {
     collapseRef.current.classList.toggle(cx('show'));
   };
@@ -31,14 +40,17 @@ function Header() {
     {
       name: 'BA',
       path: '/',
+      rightIcon: faChevronRight,
     },
     {
       name: 'Marketing',
       path: '/',
+      rightIcon: faChevronRight,
     },
     {
       name: 'Development',
       path: '/',
+      rightIcon: faChevronRight,
     },
   ];
   const navItems = [
@@ -67,14 +79,28 @@ function Header() {
     {
       name: 'Đăng nhập',
       path: config.routes.login,
+      for: 'user',
     },
     {
       name: 'Đăng ký',
       path: config.routes.register,
+      for: 'user',
     },
     {
       name: 'Cộng tác',
       path: config.routes.teacherForm,
+    },
+  ];
+  const userItems = [
+    {
+      name: 'Chỉnh sửa',
+      path: config.routes.profile,
+      leftIcon: faPen,
+    },
+    {
+      name: 'Đăng xuất',
+      path: '/',
+      leftIcon: faArrowRightFromBracket,
     },
   ];
   const renderNavItems = () => {
@@ -110,25 +136,27 @@ function Header() {
         </div>
 
         {/* Menu Icon */}
-
-        {viewPort < 1200 ? (
-          <button className={cx('navbar-toggler', 'navbar-toggler')} onClick={showNavCollapse}>
-            <span className="navbar-toggler-icon"></span>
-          </button>
-        ) : (
-          ''
-        )}
-
+        {(() => {
+          if (viewPort < 1200 && currentUser) {
+            return <UserMenu items={userItems} onClick={showNavCollapse} />;
+          } else {
+            if (viewPort < 1200) {
+              return (
+                <button className={cx('navbar-toggler', 'navbar-toggler')} onClick={showNavCollapse}>
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+              );
+            }
+            return '';
+          }
+        })()}
         {viewPort < 1200 ? (
           <div className={cx('navbar-collapse', 'collapse navbar-collapse')} ref={collapseRef}>
-            <NavCollapse 
-            // hideNavItem ={isLapTop ? true : false}
-            items={collapseMenu} dropDownItems={menuDropdown} />
+            <NavCollapse items={collapseMenu} dropDownItems={menuDropdown} />
           </div>
         ) : (
           ''
         )}
-
         {/* Actions */}
         {isDeskTop ? (
           <div className={cx('actions')}>
@@ -138,14 +166,19 @@ function Header() {
                 <FontAwesomeIcon icon={faSearch} />
               </button>
             </Search>
-            <div className={cx('controller')}>
-              <Button className={cx('controller__button')} to={config.routes.login} outline>
-                Đăng nhập
-              </Button>
-              <Button className={cx('controller__button')} to={config.routes.register} primary>
-                Đăng ký
-              </Button>
-            </div>
+
+            {currentUser ? (
+              <UserMenu items={userItems} />
+            ) : (
+              <div className={cx('controller')}>
+                <Button className={cx('controller__button')} to={config.routes.login} outline>
+                  Đăng nhập
+                </Button>
+                <Button className={cx('controller__button')} to={config.routes.register} primary>
+                  Đăng ký
+                </Button>
+              </div>
+            )}
           </div>
         ) : (
           ''
