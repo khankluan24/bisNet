@@ -249,7 +249,6 @@ section.category {
 }
 
 .favourite-course-item {
-    max-width: 400px;
     border-radius: 6px;
     padding: 12px;
     box-shadow: 4px 4px 20px rgba(73, 83, 104, 0.15);
@@ -304,23 +303,6 @@ section.category {
     opacity: 1;
 }
 
-.course-action {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 16px;
-}
-
-.shopping-cart,
-.course-rating,
-.shopping-cart__symbol,
-.course-rating__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .course-action .teacher-ava {
     width: 32px !important;
 }
@@ -363,13 +345,6 @@ section.category {
 
     color: #FFCB12;
 }
-.price {
-    font-size: 24px;
-    font-weight: 600;
-
-    color: #000;
-}
-
 /* Contact */
 .contact {
     margin-top: 72px;
@@ -407,60 +382,8 @@ section.category {
 }
 
 
-/* Subscribe */
-.subscribe {
-    background-color: var(--heading-color);
-    margin-top: 4.5rem;
-    padding: 50px 0;
-    max-height: 286px;
-}
 
-.subscribe__title {
-    font-size: 2rem;
-    font-weight: 700;
 
-    text-align: center;
-    color: #fff;
-    margin-bottom: 46px;
-    width: 46%;
-}
-
-.subscribe-form {
-    width: 26%;
-    height: 64px;
-}
-
-.subscribe-form__input {
-    background-color: transparent;
-
-    border: 2px solid #FFFFFF;
-    border-radius: 3rem;
-}
-
-.subscribe-form__input:focus {
-    border-color: #fff !important;
-    border-right-color: transparent !important;
-    background-color: transparent;
-    color: var(--primary-color);
-    box-shadow: none !important;
-}
-
-.subscribe-form__submit {
-    position: absolute !important;
-    left: 70%;
-    width: 170px;
-    height: 64px;
-
-    color: var(--primary-color);
-    background-color: #fff;
-
-    border-radius: 3rem !important;
-    line-height: 0;
-
-    font-size: 24px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-}
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 575px) {
@@ -595,42 +518,6 @@ section.category {
         margin-bottom: 1rem;
     }
 
-    /* Subscribe */
-    .subscribe__title {
-        width: 100%;
-    }
-
-    .subscribe {
-        padding: 1rem 0;
-        max-height: 400px;
-        height: 400px;
-        margin-top: 1rem;
-    }
-
-    .subscribe-form {
-        width: 75%;
-    }
-
-    .subscribe-form>a {
-        position: absolute;
-        top: 80px;
-        left: -8%;
-        width: 50%;
-    }
-
-    .subscribe-form__input {
-        border-radius: 2rem;
-        border-top-right-radius: 2rem !important;
-        border-bottom-right-radius: 2rem !important;
-    }
-
-    .subscribe-form__input:focus {
-        border-color: #fff !important;
-    }
-
-    .subscribe-form__submit {
-        width: 100%;
-    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -666,20 +553,6 @@ section.category {
 
     .banner-main__container>div {
         flex-flow: column;
-    }
-
-    .subscribe {
-        padding: 2rem 0;
-    }
-
-    .subscribe__title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        width: 65%;
-    }
-
-    .subscribe-form {
-        width: 65%;
     }
 
     /* Category */
@@ -766,10 +639,6 @@ section.category {
         margin-bottom: 1rem;
     }
 
-    /* Subscribe */
-    .subscribe {
-        margin-top: 2rem;
-    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -858,23 +727,6 @@ section.category {
         margin-bottom: 0;
     }
 
-    /* Subscribe */
-    .subscribe {
-        padding: 2rem 0;
-        margin-top: 2.5rem;
-    }
-
-    .subscribe__title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        width: 65%;
-    }
-
-    .subscribe-form {
-        width: 50%;
-    }
-
-    /* Favourite Course */
 }
 
 /* Large devices (large desktops, 992px and 1199px) */
@@ -912,20 +764,6 @@ section.category {
     .benefit__item-info__title {
         height: 30px;
         margin-bottom: 1rem;
-    }
-
-    .subscribe {
-        padding: 2rem 0;
-    }
-
-    .subscribe__title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        width: 65%;
-    }
-
-    .subscribe-form {
-        width: 43%;
     }
 
     .category>.container {
@@ -966,34 +804,5 @@ section.category {
         margin-bottom: 1rem;
     }
 
-    .subscribe {
-        padding: 2rem 0;
-    }
-
-    .subscribe__title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        width: 65%;
-    }
-
-    .subscribe-form {
-        width: 36%;
-    }
 }
 
-/* Giant devices (Giant desktops, 1400px and up) */
-@media only screen and (min-width: 576px) {
-    .favourite-course__list {
-        height: 500px;
-        
-    }
-    .favourite-course-item {
-        max-width: unset;
-    }
-}
-
-
-/* Swiper */
-.swiper-wrapper {
-    overflow: unset !important;
-}

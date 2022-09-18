@@ -1,18 +1,17 @@
 import data from "../db.json" assert { type: "json" };
 const swiperWrapper = document.querySelector(".swiper-wrapper");
+
 const renderCourses = () => {
-  data.courseCategory.forEach((category) => {
-    // console.log(category)
-    // console.log(!!category.title.toLowerCase().includes('front-end'))
+  data.courseCategory.map((category) => {
     const render = category.courses.map((course) => {
       return `
       <div class="swiper-slide">
-    <div class="favourite-course-item card">
+    <div class="favourite-course-item card" onclick="window.open('../course/courses.html','_blank')">
       <div class="favourite-course-item__header d-flex flex-column align-items-start px-0">
         <img class="favourite-course-item__header-img img-fluid" src="${
           course.image_url
         }" alt="">
-        <a class="course-tag ${
+        <a class="course-tag mt-3 ${
           category.title.toLowerCase().includes("front-end") ? "red" : "blue"
         }">${
         category.title.toLowerCase().includes("front-end")
@@ -20,17 +19,17 @@ const renderCourses = () => {
           : "Back-end"
       }</a>
       </div>
-      <div class="favourite-course-item__body card-body px-0 py-0 mt-4">
+      <div class="favourite-course-item__body card-body px-0 py-0 mt-3">
         <h3 class="favourite-course-item__body-heading fw-bold">${
           course.title
         }</h3>
-        <p class="favourite-course-item__body-short-desc text-black mb-4">
-          ${course.description.substring(0, 25).concat("...")}
+        <p class="favourite-course-item__body-short-desc text-black mb-3">
+          ${course.description}
         </p>
-        <hr class="w-75 mb-3">
-        <div class="course-action">
-          <div class="shopping-cart">
-            <div class="shopping-cart__symbol">
+        <hr class="w-75 mb-2">
+        <div class="course-action d-flex align-items-center align-items-sm-start align-items-md-center justify-content-between flex-sm-column flex-md-row flex-wrap">
+          <div class="shopping-cart d-flex align-items-center justify-content-center ms-1">
+            <div class="shopping-cart__symbol d-flex align-items-center justify-content-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 17 18"
                 fill="none">
                 <path
@@ -50,8 +49,8 @@ const renderCourses = () => {
             </div>
             <p class="shopping-cart__count mb-0">269</p>
           </div>
-          <div class="course-rating">
-            <div class="course-rating__info">
+          <div class="course-rating d-flex align-items-center justify-content-center ms-1 my-2">
+            <div class="course-rating__info d-flex align-items-center justify-content-center">
               <p class="course-rating__score mb-0">4.3</p>
             </div>
             <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
@@ -63,49 +62,53 @@ const renderCourses = () => {
           </div>
           <img src="../assets/img/teacher-ava.png" alt="Teacher avatar" class="teacher-ava">
         </div>
-        <h2 class="price">${Math.floor((Math.random() + 1) * 1000)}đ</h2>
+        <h2 class="price mb-sm-0 mt-sm-2">${Math.floor(
+          (Math.random() + 1) * 1000
+        )}đ</h2>
       </div>
     </div>
   </div>
             `;
     });
-    swiperWrapper.innerHTML = render.join("");
+    swiperWrapper.innerHTML += render.join("");
   });
 };
 
 renderCourses();
 
 const mySwiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  // Optional parameters
   direction: "horizontal",
-  class: 'favourite-course__list',
+  class: "favourite-course__list",
   breakpoints: {
     375: {
       slidesPerView: 1,
-      centeredSlides: true
+      centeredSlides: true,
     },
     576: {
       slidesPerView: 2,
-      centeredSlides: false
+      centeredSlides: false,
     },
     992: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 10,
     },
     1400: {
       slidesPerView: 4,
-    }
-  
+    },
   },
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
 });
+
+
+const redirect = () => {
+  console.log(123)
+}

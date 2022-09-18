@@ -1,0 +1,116 @@
+.subscribe {
+    background-color: var(--heading-color);
+    margin-top: 4.5rem;
+    max-height: 800px;
+}
+
+.subscribe__title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 46px;
+}
+
+/* Form */
+.subscribe-form {
+    border: 2px solid #fff;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.subscribe-form__input {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    width: 70%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.subscribe-form__input:focus {
+    border-color: #fff !important;
+    border-right-color: transparent !important;
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: none !important;
+}
+
+button.subscribe-form__submit {
+    position: absolute !important;
+    height: 100%;
+    right: 0;
+    top: 0;
+    padding: 20px 30px;
+
+    color: var(--primary-color);
+    background-color: #fff;
+
+    border-radius: 3rem !important;
+    line-height: 0;
+
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.subscribe-form__submit .title {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 375px) {
+    .subscribe {
+        padding: 30px 0;
+    }
+    .subscribe__title {
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    /* Form */
+    .subscribe-form {
+        width: 400px !important;
+    }
+
+    .subscribe-form__input {
+        padding: 16px;
+    }
+
+    button.subscribe-form__submit {
+        padding: 16px;
+
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .subscribe {
+        padding: 50px 0
+    }
+    .subscribe__title {
+        width: 75%;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    /* Form */
+    .subscribe-form {
+        width: 480px !important;
+    }
+
+    .subscribe-form__input {
+        padding: 20px;
+    }
+
+    button.subscribe-form__submit {
+        padding: 22px 40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {
+    .subscribe__title {
+        font-size: 32px;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {}
