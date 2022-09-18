@@ -79,15 +79,7 @@ function FavoriteCourse() {
               slidesPerView: 2,
               spaceBetween: 0,
             },
-            768: {
-              centeredSlides: false,
-
-              slidesPerView: 2,
-            },
             992: {
-              slidesPerView: 3,
-            },
-            1200: {
               slidesPerView: 3,
             },
             1400: {
@@ -99,6 +91,7 @@ function FavoriteCourse() {
         >
           {renderCourses()}
         </Swiper>
+        
       </div>
     </div>
   );

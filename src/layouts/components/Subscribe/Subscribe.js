@@ -19,7 +19,7 @@ function Subscribe() {
     <section className={cx('wrapper')}>
       <div className={cx('container-fluid')}>
         <div className={cx('row flex-column align-items-center px-4 px-md-0')}>
-          <h3 className={cx('title')}>Đừng bỏ lỡ nhiều thông tin mới nhất từ BIS.NET Đăng ký ngay</h3>
+          <h3 className={cx('title','text-center fw-bold')}>Đừng bỏ lỡ nhiều thông tin mới nhất từ BIS.NET Đăng ký ngay</h3>
           <form className={cx('form', 'input-group ms-3 ms-md-0 mb-5')} onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register('email', {

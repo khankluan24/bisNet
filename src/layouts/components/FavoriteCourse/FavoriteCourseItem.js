@@ -88,7 +88,7 @@ function FavoriteCourseItem(props) {
           >
             {props.tag.includes('Front-end') ? 'Front-end' : 'Back-end'}
           </Link>
-        </div>
+        </div>  
         <div className={cx('body', 'card-body px-0 py-0 mt-4')}>
           <h3 className={cx('heading', 'fw-bold')}>{props.title}</h3>
           <p className={cx('desc', 'text-black mb-4')}>{props.desc}</p>

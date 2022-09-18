@@ -10,12 +10,9 @@
   }
   max-height: 800px;
   .title {
-    font-weight: 700;
 
-    text-align: center;
     color: #fff;
     margin-bottom: 46px;
-    width: 46%;
     @include breakpoint() {
       width: 100%;
       font-size: 2.4rem;
