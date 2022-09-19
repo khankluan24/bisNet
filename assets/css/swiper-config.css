@@ -7,7 +7,12 @@
     padding: 0 20px;
     cursor: pointer;
 }
-
+.star-wrapper {
+    width: 78px;
+}
+.course-rating__count {
+    width: 48px;
+}
 @media only screen and (min-width: 375px) {
     .swiper-wrapper {
         height: 500px;

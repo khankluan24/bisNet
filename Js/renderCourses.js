@@ -1,6 +1,6 @@
 import data from "../db.json" assert { type: "json" };
 const swiperWrapper = document.querySelector(".swiper-wrapper");
-
+let renderStar;
 const renderCourses = () => {
   data.courseCategory.map((category) => {
     const render = category.courses.map((course) => {
@@ -47,24 +47,35 @@ const renderCourses = () => {
                   stroke-linejoin="round" />
               </svg>
             </div>
-            <p class="shopping-cart__count mb-0">269</p>
+            <p class="shopping-cart__count mb-0">${Math.floor(
+              Math.random() * 100
+            )}</p>
           </div>
           <div class="course-rating d-flex align-items-center justify-content-center ms-1 my-2">
             <div class="course-rating__info d-flex align-items-center justify-content-center">
-              <p class="course-rating__score mb-0">4.3</p>
+              <p class="course-rating__score mb-0">
+              ${course.star}
+              </p>
             </div>
-            <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
-            <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
-            <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
-            <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
-            <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
-            <p class="course-rating__count mb-0">(100)</p>
+            <div class='star-wrapper d-flex'>
+            ${new Array(course.star)
+              .fill()
+              .map(
+                (item) =>
+                  `<img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">`
+              ).join('')}
+           
+            </div>
+            <p class="course-rating__count mb-0">(${Math.floor(
+              Math.random() * 0x100
+            )})</p>
           </div>
           <img src="../assets/img/teacher-ava.png" alt="Teacher avatar" class="teacher-ava">
         </div>
-        <h2 class="price mb-sm-0 mt-sm-2">${Math.floor(
-          (Math.random() + 1) * 1000
-        )}đ</h2>
+        <h2 class="price mb-sm-0 mt-sm-2">${new Intl.NumberFormat("vn-VN", {
+          style: "currency",
+          currency: "VND",
+        }).format(Math.floor(Math.random() * 0x100000))}</h2>
       </div>
     </div>
   </div>
@@ -108,7 +119,12 @@ const mySwiper = new Swiper(".swiper", {
   },
 });
 
+// ${Math.floor(
+//   Math.random() * 6
+// )}
 
-const redirect = () => {
-  console.log(123)
-}
+// <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
+// <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
+// <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
+// <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
+// <img src="../assets/img/star-icon.png" class="course-rating__icon" alt="Golden star">
