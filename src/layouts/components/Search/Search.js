@@ -12,7 +12,7 @@ import config from '~/config';
 import styles from './Search.module.scss';
 import Popper from '~/components/Popper';
 const cx = classNames.bind(styles);
-function Search({ children,classes }) {
+function Search({classes }) {
   const [searchValue, setSearchValue] = useState('');
   const [visible, setVisible] = useState(true);
   const [searchResult, setSearchResult] = useState([]);

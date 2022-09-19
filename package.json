@@ -1,7 +1,6 @@
 {
   "name": "bis_net-ui",
   "version": "0.1.0",
-  "proxy": "https://api-gateway.fullstack.edu.vn/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -15,7 +14,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "classnames": "^2.3.1",
-    "local-cors-proxy": "^1.1.0",
+    "firebase": "^9.10.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",

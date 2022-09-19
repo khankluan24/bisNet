@@ -1,5 +1,5 @@
 // Libraries
-import { useState, useEffect, useRef } from 'react';
+import {useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,7 +13,6 @@ import {
 // Path
 import config from '~/config';
 import UserMenu from '~/components/UserMenu';
-import { Icons as icon } from '~/assets/Icons';
 import NavCollapse from '~/components/NavCollapse';
 import Search from '~/layouts/components/Search';
 import { useViewPort } from '~/hooks';

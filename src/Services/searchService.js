@@ -1,7 +1,7 @@
-import * as httpRequest from '~/utils/httpRequest';
+import * as request from '~/utils/httpRequest';
 const get = async (q) => {
   try {
-    const res = await httpRequest.get('api/search', {
+    const res = await request.get('api/search', {
       params: {
         q,
       },
@@ -9,6 +9,9 @@ const get = async (q) => {
     return res.data;
     
   } catch (error) {
+    console.error(error.message)
+
+
   }
 };
 

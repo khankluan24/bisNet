@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import {MainLayout} from '~/layouts';
+import {app} from '~/fireBaseConnnect'
 
-
-// console.log(MainLayout)
+console.log(app)
 function App() {
   return (
     <Router>
