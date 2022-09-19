@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 .star-wrapper {
-    width: 78px;
+    width: auto;
 }
 .course-rating__count {
     width: 48px;
