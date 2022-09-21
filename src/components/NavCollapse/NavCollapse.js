@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

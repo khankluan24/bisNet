@@ -25,8 +25,6 @@ const cx = classNames.bind(styles);
 function Header() {
   const collapseRef = useRef('');
   let viewPort = useViewPort();
-  let isMobile = viewPort >= 576;
-  let isTablet = viewPort >= 768;
   let isLapTop = viewPort >= 992;
   let isDeskTop = viewPort >= 1200;
 

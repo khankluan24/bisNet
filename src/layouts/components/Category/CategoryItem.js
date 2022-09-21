@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import { Link, useNavigate } from 'react-router-dom';
 

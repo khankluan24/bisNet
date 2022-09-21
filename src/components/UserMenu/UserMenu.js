@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 
 // Path
-import { Icons as icon } from '~/assets/Icons';
 import { useViewPort } from '~/hooks';
 import styles from './UserMenu.module.scss';
 import Menu from '~/components/Popper/Menu';
@@ -13,9 +12,7 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 function UserMenu(props) {
   let viewPort = useViewPort();
-  let isMobile = viewPort >= 576;
-  let isTablet = viewPort >= 768;
-  let isLapTop = viewPort >= 992;
+
   let isDeskTop = viewPort >= 1200;
   return (
     <div className={cx('user', 'ms-3')} onClick={props.onClick} >

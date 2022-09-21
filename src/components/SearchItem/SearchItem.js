@@ -1,8 +1,6 @@
 import classNames from 'classnames/bind';
-// import { Link } from 'react-router-dom';
 
 import images from '~/assets/images';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './SearchItem.module.scss';
 const cx = classNames.bind(styles);
 
