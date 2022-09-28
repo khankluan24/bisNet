@@ -1,30 +1,20 @@
 import classNames from 'classnames/bind';
+import {Link} from 'react-router-dom';
+import {decode} from 'html-entities';
 
-import images from '~/assets/images';
+
+import config from '~/config';
 import styles from './SearchItem.module.scss';
 const cx = classNames.bind(styles);
 
-function SearchItem({ course, post }) {
-  if (post) {
-    return (
-      <a href={`https://fullstack.edu.vn/blog/${post.slug}.html`} className={cx('search-item')}>
-        <img alt={post.title} src={post['image_url'] || images.fav} />
-        <span>{post.title}</span>
-      </a>
-    );
-  } else if (course) {
-    return (
-      <a
-        href={
-          `https://fullstack.edu.vn${course['landing_page_url']}` 
-        }
-        className={cx('search-item')}
-      >
-        <img alt={course.title} src={course['image_url']} />
-        <span>{course.title}</span>
-      </a>
-    );
-  }
+function SearchItem({ course }) {
+  const courseImg = course.thumbnails.high.url
+  return (
+    <Link to={config.routes.course} className={cx('search-item')}>
+      <img alt={course.title} src={courseImg} />
+      <span>{decode(course.title)}</span>
+    </Link>
+  );
 }
 
 export default SearchItem;

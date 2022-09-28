@@ -1,36 +1,28 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import config from '~/config';
 import Button from '~/components/Button';
+import config from '~/config';
 import images from '~/assets/images';
 import Popper from '~/components/Popper';
 import { default as icon } from '~/assets/Icons';
 import styles from './FavoriteCourse.module.scss';
-import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function FavoriteCourseItem(props) {
   let navigate = useNavigate();
-  const starNumRef = useRef('');
 
   const renderStar = () => {
-    const num = parseInt(starNumRef.current.innerHTML);
-    if (num) {
-      return new Array(num)
-        .fill()
-        .map((item, index) => <img key={index} src={icon.star} className={cx('star')} alt="Golden star" />);
-    }
+    return new Array(props.star)
+      .fill()
+      .map((item, index) => <img key={index} src={icon.star} className={cx('star')} alt="Golden star" />);
+    // .join('');
   };
-
-  const [star, setStar] = useState(null);
-  useEffect(() => {
-    setStar(renderStar);
-  }, []);
 
   return (
     <HeadlessTippy
@@ -88,7 +80,7 @@ function FavoriteCourseItem(props) {
           >
             {props.tag.includes('Front-end') ? 'Front-end' : 'Back-end'}
           </Link>
-        </div>  
+        </div>
         <div className={cx('body', 'card-body px-0 py-0 mt-4')}>
           <h3 className={cx('heading', 'fw-bold')}>{props.title}</h3>
           <p className={cx('desc', 'text-black mb-4')}>{props.desc}</p>
@@ -101,7 +93,7 @@ function FavoriteCourseItem(props) {
           >
             <div className={cx('shopping', 'd-flex ms-1 align-items-center')}>
               <img className={cx('symbol', 'd-flex mr-8')} src={icon.shoppingCart} alt="shoppingCart" />
-              <p className={cx('count', 'mb-0')}>{Math.floor((Math.random() + 1) * 100)}</p>
+              <p className={cx('count', 'mb-0')}>{Math.floor(Math.random() * 100)}</p>
             </div>
             <div
               className={cx(
@@ -109,15 +101,20 @@ function FavoriteCourseItem(props) {
                 'd-flex align-items-center justify-content-center justify-content-sm-start justify-content-md-center ms-1 my-3',
               )}
             >
-              <span className={cx('number', 'mb-0 d-flex justify-content-center align-items-center')} ref={starNumRef}>
-                {Math.floor((Math.random() + 0) * 6)}
+              <span className={cx('number', 'mb-0 d-flex justify-content-center align-items-center')}>
+                {props.star}
               </span>
-              <div className={cx('star-wrapper', 'mr-8 d-flex')}>{star}</div>
+              <div className={cx('star-wrapper', 'mr-8 d-flex')}>{renderStar()}</div>
               <span className={cx('count', 'mb-0')}>(100)</span>
             </div>
             <img src={images.fav} alt="Teacher avatar" className={cx('teacher-avatar', '')} />
           </div>
-          <h2 className={cx('price')}>{props.price}đ</h2>
+          <h2 className={cx('price')}>
+            {new Intl.NumberFormat('vn-VN', {
+              style: 'currency',
+              currency: 'VND',
+            }).format(Math.floor(Math.random() * 0x100000))}
+          </h2>
         </div>
       </div>
     </HeadlessTippy>

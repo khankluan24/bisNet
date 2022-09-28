@@ -1,16 +1,15 @@
-import * as request from '~/utils/httpRequest';
-const get = async (q) => {
+import axios from 'axios';
+const get = async (querry) => {
   try {
-    const res = await request.get(
-      'https://api-gateway.fullstack.edu.vn/api/search?',
+    const res = await axios.get(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${querry}&key=AIzaSyB2fVghe51ROLtck4jq-3jX5W0Frs0aa6s`,
       {
         params: {
-          q,
+          q: querry,
         },
       },
-      { headers: { 'Access-Control-Allow-Origin': '*' } },
     );
-    return res.data;
+    return res.data.items;
   } catch (error) {
     console.error(error.message);
   }

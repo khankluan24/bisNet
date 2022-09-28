@@ -3,10 +3,10 @@
     align-items: center;
     padding: 8px 0;
     & > img {
-        border-radius: 50%;
-        height: 32px;
-        object-fit: cover;
-        width: 32px;
+        border-radius: 4px;
+        height: 40px;
+        object-fit: contain;
+        width: 50px;
     }
     & > span {
         word-wrap: break-word;

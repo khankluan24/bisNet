@@ -12,7 +12,7 @@ import config from '~/config';
 import styles from './Search.module.scss';
 import Popper from '~/components/Popper';
 const cx = classNames.bind(styles);
-function Search({classes }) {
+function Search({ classes }) {
   const [searchValue, setSearchValue] = useState('');
   const [visible, setVisible] = useState(true);
   const [searchResult, setSearchResult] = useState([]);
@@ -23,15 +23,14 @@ function Search({classes }) {
   const inputRef = useRef('');
   const searchRef = useRef('');
   // Khai báo getApi khóa học và post
-  const courses = searchResult.courses;
-  const posts = searchResult.posts;
+  const courses = searchResult;
 
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    setSearchValue('')
-    setVisible(false)
-  },[location.pathname])
+    setSearchValue('');
+    setVisible(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!searchDebounce.trim()) {
@@ -79,23 +78,14 @@ function Search({classes }) {
               <Link to={config.routes.search}>Xem thêm</Link>
             </div>
             {/* Chỗ này bỏ search item cho khóa học */}
-            {courses?.map((course) => (
-              <SearchItem key={course.id} course={course} />
-            ))}
-
-            <div className={cx('search-heading')}>
-              <h5>Bài viết</h5>
-              <Link to={config.routes.search}>Xem thêm</Link>
-            </div>
-            {/* Chỗ này bỏ search item cho bài viết */}
-            {posts?.map((post) => (
-              <SearchItem key={post.id} post={post} />
+            {courses?.map((course, index) => (
+              <SearchItem key={index} course={course.snippet} />
             ))}
           </div>
         </Popper>
       )}
     >
-      <div className={cx('search',classes)} ref={searchRef}>
+      <div className={cx('search', classes)} ref={searchRef}>
         <input
           value={searchValue}
           ref={inputRef}

@@ -1,13 +1,12 @@
 import axios from 'axios';
+import * as Config from '~/constants/Config';
 
-export const instance = axios.create({
-  baseURL: 'http://localhost:3001/',
-  headers: {"Access-Control-Allow-Origin": "*"}
-});
-
-//Tạo phương thức get
-export const get = async (url, params = {}) => {
-  const response = await axios.get(url, params);
-  return response.data;
+export const callApi = (endpoint, method = 'get', body) => {
+  return axios({
+    method,
+    url: `${Config.API_URL}/${endpoint}`,
+    data: body,
+  })
+    .then((res) => res.data)
+    .catch((error) => console.error(error));
 };
-

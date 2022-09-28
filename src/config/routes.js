@@ -3,7 +3,7 @@ const route = {
     login:'/login',
     register:'/register',
     courses:'/courses',
-    course:'/learning',
+    course:'/courses/id',
     articles:'/articles',
     post:'/post',
     forum:'/forum',

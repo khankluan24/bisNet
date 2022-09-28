@@ -14,7 +14,7 @@ import 'swiper/scss/scrollbar';
 
 // Path
 import config from '~/config';
-import * as courseService from '~/Services/courseService';
+import * as request from '~/utils/httpRequest';
 import { default as Item } from './FavoriteCourseItem';
 import './slide.scss';
 import styles from './FavoriteCourse.module.scss';
@@ -26,29 +26,28 @@ function FavoriteCourse() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const result = await courseService.get();
+      const result = await request.callApi('data', 'get', null);
       setCourseList(result || []);
     };
     fetchApi();
   }, []);
 
   const renderCourses = () =>
-    courseList?.map(category => {
-      const course = category.courses.map((item) => {
-        return (
-          <SwiperSlide>
-            <Item
-              key={item.id}
-              tag={category.title}
-              title={item.title}
-              desc={item.description}
-              price={item.price}
-              bought={item['students_count']}
-              img={item['image_url']}
-            />
-          </SwiperSlide>
-        );
-      });
+    courseList?.map((category) => {
+      const course = category.courses.map((item) => (
+        <SwiperSlide>
+          <Item
+            key={item.id}
+            tag={category.title}
+            title={item.title}
+            star ={item.star}
+            desc={item.description}
+            price={item.price}
+            bought={item['students_count']}
+            img={item['image_url']}
+          />
+        </SwiperSlide>
+      ));
       return course;
     });
 
@@ -91,7 +90,6 @@ function FavoriteCourse() {
         >
           {renderCourses()}
         </Swiper>
-        
       </div>
     </div>
   );
