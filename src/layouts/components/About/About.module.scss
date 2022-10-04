@@ -1,0 +1,46 @@
+@import '../../../components/GlobalStyles/GlobalStyles.module.scss';
+.wrapper {
+  border: 2px solid #ef5350;
+  border-radius: 12px;
+  & > div {
+    @include breakpoint() {
+      padding: 16px 0;
+    }
+    @include breakpoint(sm) {
+      padding: 24px 16px;
+    }
+    @include breakpoint(lg) {
+      padding: 42.5px 0;
+    }
+    .heading {
+      font-weight: 600;
+      font-size: 24px;
+
+      color: var(--description-color);
+    }
+    .img-wrapper {
+      @include breakpoint(lg) {
+        max-width: 925px;
+      }
+      &__section {
+        & > img {
+          object-fit: contain;
+        }
+        @include breakpoint(sm) {
+          width: fit-content;
+        }
+        @include breakpoint(md) {
+          &__section {
+            flex-basis: 50%;
+          }
+        }
+        @include breakpoint(lg) {
+          &__section {
+            flex-basis: unset;
+          }
+        }
+      }
+      
+    }
+  }
+}

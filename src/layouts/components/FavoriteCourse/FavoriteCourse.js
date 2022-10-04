@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { onValue } from 'firebase/database';
 
 // Swiper Styles
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,11 +15,12 @@ import 'swiper/scss/scrollbar';
 
 // Path
 import config from '~/config';
-import * as request from '~/utils/httpRequest';
+import {getCourses } from '~/utils/httpRequest';
 import { default as Item } from './FavoriteCourseItem';
 import './slide.scss';
 import styles from './FavoriteCourse.module.scss';
 import { Link } from 'react-router-dom';
+
 const cx = classNames.bind(styles);
 
 function FavoriteCourse() {
@@ -26,8 +28,11 @@ function FavoriteCourse() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const result = await request.callApi('data', 'get', null);
-      setCourseList(result || []);
+      await onValue(getCourses, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        setCourseList(data || []);
+      });
     };
     fetchApi();
   }, []);
@@ -40,7 +45,7 @@ function FavoriteCourse() {
             key={item.id}
             tag={category.title}
             title={item.title}
-            star ={item.star}
+            star={item.star}
             desc={item.description}
             price={item.price}
             bought={item['students_count']}
