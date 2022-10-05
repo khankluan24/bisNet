@@ -6,7 +6,6 @@
   box-shadow: 0px 12px 20px rgb(128 125 125 / 10%);
   height: var(--main-layout-header-height);
   .navbar {
-    width: var(--main-layout-header-width);
     @include breakpoint(lg) {
       padding: 4px 0;
     }

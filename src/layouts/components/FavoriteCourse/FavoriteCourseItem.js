@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import classNames from 'classnames/bind';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 import Button from '~/components/Button';
 import config from '~/config';
@@ -21,7 +20,6 @@ function FavoriteCourseItem(props) {
     return new Array(props.star)
       .fill()
       .map((item, index) => <img key={index} src={icon.star} className={cx('star')} alt="Golden star" />);
-    // .join('');
   };
 
   return (
@@ -105,7 +103,7 @@ function FavoriteCourseItem(props) {
                 {props.star}
               </span>
               <div className={cx('star-wrapper', 'mr-8 d-flex')}>{renderStar()}</div>
-              <span className={cx('count', 'mb-0')}>(100)</span>
+              <span className={cx('count', 'mb-0')}>({props.bought})</span>
             </div>
             <img src={images.fav} alt="Teacher avatar" className={cx('teacher-avatar', '')} />
           </div>

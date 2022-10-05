@@ -110,7 +110,7 @@ function Header() {
   };
   return (
     <header className={cx('header')}>
-      <nav className={cx('navbar', 'navbar navbar-light')}>
+      <nav className={cx('navbar', 'navbar navbar-light container')}>
         {/* Logo + menu item */}
         <div className={cx('brand')}>
           {/* Logo */}

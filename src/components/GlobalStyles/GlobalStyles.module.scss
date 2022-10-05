@@ -14,7 +14,6 @@
   --font-secondary: 'Poppins', sans-serif;
   // Main Layout
   --main-layout-header-height: 86px;
-  --main-layout-header-width: 1173px;
   // Search
   --search-width: 260px;
   --desc-color: #474d57;
@@ -86,7 +85,7 @@ input:-webkit-autofill:focus {
     }
   }
   // 1400px
-  @else if $point == xl {
+  @else if $point == xxl {
     @media (min-width: 87.5em) {
       @content;
     }

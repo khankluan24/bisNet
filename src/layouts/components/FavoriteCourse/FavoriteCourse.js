@@ -30,7 +30,6 @@ function FavoriteCourse() {
     const fetchApi = async () => {
       await onValue(getCourses, (snapshot) => {
         const data = snapshot.val();
-        console.log(data);
         setCourseList(data || []);
       });
     };
